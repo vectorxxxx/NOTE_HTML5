@@ -352,7 +352,7 @@ ul>li:last-child {
 }
 ```
 
-![image-20210516162703966](C:/Users/Archimedes/AppData/Roaming/Typora/typora-user-images/image-20210516162703966.png)
+![image-20210516162703966](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210517204218.png)
 
 - <mark>`:link`</mark> 未访问的链接
 - <mark>`:visited`</mark> 已访问的链接
