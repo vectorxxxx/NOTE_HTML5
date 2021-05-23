@@ -1,0 +1,46 @@
+<!-- 文档声明，声明当前网页的版本 -->
+<!doctype html>
+<!-- html的根标签(元素)，网页中的所有内容都要写根元素的里边 -->
+<html>
+<!-- head是网页的头部，head中的内容不会在网页中直接出现，主要用来帮助浏览器或搜索引擎来解析网页 -->
+
+<head>
+    <!-- meta标签用来设置网页的元数据，这里meta用来设置网页的字符集，避免乱码问题 -->
+    <meta charset="utf-8">
+    <!-- title中的内容会显示在浏览器的标题栏，搜索引擎会主要根据title中的内容来判断网页的主要内容 -->
+    <title>实战练习-京东图片列表</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        ul {
+            /* 宽高 */
+            width: 190px;
+            height: 470px;
+            /* 处理溢出部分，这块不写效果也是一样的 */
+            overflow: hidden;
+            /* 设置背景色 */
+            background-color: #F4F4F4;
+        }
+
+        ul>li:not(:last-child) {
+            /* 设置下外边距 */
+            margin-bottom: 10px;
+        }
+
+        ul>li img {
+            /* 设定图片宽度 */
+            width: 100%;
+        }
+    </style>
+</head>
+<!-- body是htm1的子元素，表示网页的主体，网页中所有的可见内容都应该写在body里 -->
+
+<body>
+    <ul>
+        <li><a href="javascript:;"><img src="assets/1.jpg"></a></li>
+        <li><a href="javascript:;"><img src="assets/2.jpg"></a></li>
+        <li><a href="javascript:;"><img src="assets/3.jpg"></a></li>
+    </ul>
+</body>
+
+</html>

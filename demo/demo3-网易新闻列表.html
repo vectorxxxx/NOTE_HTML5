@@ -1,0 +1,140 @@
+<!-- 文档声明，声明当前网页的版本 -->
+<!doctype html>
+<!-- html的根标签(元素)，网页中的所有内容都要写根元素的里边 -->
+<html>
+<!-- head是网页的头部，head中的内容不会在网页中直接出现，主要用来帮助浏览器或搜索引擎来解析网页 -->
+
+<head>
+    <!-- meta标签用来设置网页的元数据，这里meta用来设置网页的字符集，避免乱码问题 -->
+    <meta charset="utf-8">
+    <!-- title中的内容会显示在浏览器的标题栏，搜索引擎会主要根据title中的内容来判断网页的主要内容 -->
+    <title>实战练习-网易新闻列表</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* ====================整体==================== */
+        .news_money {
+            /* 整体布局 */
+            width: 300px;
+            height: 324px;
+            margin: 35px auto;
+        }
+
+        a {
+            /* 去除超链接样式 */
+            text-decoration: none;
+        }
+
+        /* ====================标题==================== */
+        .news_title {
+            height: 40px;
+            border-top: 1px #ddeedd solid;
+        }
+
+        .news_title .title {
+            /* 标题整体布局 */
+            width: 32px;
+            height: 24px;
+            line-height: 24px;
+            padding-top: 6px;
+            border-top: 1px #f34540 solid;
+            margin-top: -1px;
+
+        }
+
+        .news_title a {
+            /* 标题字体样式 */
+            font-size: 16px;
+            font-weight: bold;
+            color: #404040;
+        }
+
+        .news_title a:hover {
+            /* 标题悬浮样式 */
+            color: red;
+        }
+
+        /* ====================图片==================== */
+        .new_img {
+            height: 150px;
+        }
+
+        .news_img:hover {
+            transform: scale(1.1);
+        }
+
+        /* 图片标题 */
+        .news_img .img_title {
+            /* 图片标题整体布局 */
+            height: 40px;
+            line-height: 40px;
+            margin-top: -40px;
+            padding-left: 30px;
+        }
+
+        .news_img a {
+            /* 图片标题字体样式 */
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* ====================新闻列表==================== */
+        .news_list {
+            height: 120px;
+            margin-top: 12px;
+        }
+
+        .news_list li {
+            /* 新闻列表整体布局 */
+            width: 285px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        .news_list a {
+            /* 新闻列表字体样式 */
+            font-size: 14px;
+            color: #666;
+        }
+
+        .news_list a:hover {
+            /* 新闻列表悬浮样式 */
+            color: red;
+        }
+    </style>
+</head>
+<!-- body是htm1的子元素，表示网页的主体，网页中所有的可见内容都应该写在body里 -->
+
+<body>
+
+    <div class="news_money">
+        <div class="news_title">
+            <h2 class="title"><a href="#">财经</a></h2>
+        </div>
+        <div class="news_img">
+            <a href="#">
+                <img width="300" height="150" alt="楼市＂加息潮＂来了?" src="assets/news.png">
+                <div class="img_title">
+                    <h3>楼市"加息潮"来了?</h3>
+                </div>
+            </a>
+        </div>
+        <ul class="news_list">
+            <li>
+                <a href="#">太疯狂！1000万芯片投资 "换来"7个涨停</a>
+            </li>
+            <li>
+                <a href="#">重磅定调！打击比特币挖矿和交易行为</a>
+            </li>
+            <li>
+                <a href="#">拜登愿将基建规模砍去6000亿美元</a>
+            </li>
+            <li>
+                <a href="#">呷哺呷哺高管大换血 经营模式要变？</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!-- 文档声明，声明当前网页的版本 -->
+<!doctype html>
+<!-- html的根标签(元素)，网页中的所有内容都要写根元素的里边 -->
+<html>
+<!-- head是网页的头部，head中的内容不会在网页中直接出现，主要用来帮助浏览器或搜索引擎来解析网页 -->
+
+<head>
+    <!-- meta标签用来设置网页的元数据，这里meta用来设置网页的字符集，避免乱码问题 -->
+    <meta charset="utf-8">
+    <!-- title中的内容会显示在浏览器的标题栏，搜索引擎会主要根据title中的内容来判断网页的主要内容 -->
+    <title>实战练习-京东左侧导航条</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            /* body背景色，通过颜色拾取器识别 */
+            background-color: #F4F4F4;
+        }
+
+        ul {
+            /* 整体宽高 */
+            width: 190px;
+            height: 450px;
+            /* 整体内外边距 */
+            padding: 10px 0;
+            margin: 10px auto;
+            /* 处理溢出部分 */
+            overflow: hidden;
+            /* 整体背景色，通过颜色拾取器识别 */
+            background-color: #FEFEFE;
+        }
+
+        ul>li {
+            /* 每行宽高 */
+            height: 25px;
+            padding-left: 18px;
+            /* 每行行高 */
+            line-height: 25px;
+			/* 设置font-size */
+			font-size: 0;
+        }
+
+        ul>li:hover {
+            /* 悬浮背景色 */
+            background-color: #D9D9D9;
+        }
+
+        ul>li a {
+            /* 字体大小、颜色、样式 */
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        ul>li a:hover {
+            /* 悬浮字体颜色 */
+            color: #C81724;
+        }
+
+        ul>li span {
+            padding: 0 2px; 
+            font-size: 12px;
+        }
+    </style>
+</head>
+<!-- body是htm1的子元素，表示网页的主体，网页中所有的可见内容都应该写在body里 -->
+
+<body>
+    <ul>
+        <li>
+            <a href="javascript:;">家用电器</a>
+        </li>
+        <li>
+            <a href="javascript:;">手机</a>
+            <span>/</span>
+            <a href="javascript:;">运营商</a>
+            <span>/</span>
+            <a href="javascript:;">数码</a>
+        </li>
+        <li>
+            <a href="javascript:;">电脑</a>
+            <span>/</span>
+            <a href="javascript:;">办公</a>
+        </li>
+        <li>
+            <a href="javascript:;">家居</a>
+            <span>/</span>
+            <a href="javascript:;">家具</a>
+            <span>/</span>
+            <a href="javascript:;">家装</a>
+            <span>/</span>
+            <a href="javascript:;">厨具</a>
+        </li>
+        <li>
+            <a href="javascript:;">男装</a>
+            <span>/</span>
+            <a href="javascript:;">女装</a>
+            <span>/</span>
+            <a href="javascript:;">童装</a>
+            <span>/</span>
+            <a href="javascript:;">内衣</a>
+        </li>
+        <li>
+            <a href="javascript:;">美妆</a>
+            <span>/</span>
+            <a href="javascript:;">个护清洁</a>
+            <span>/</span>
+            <a href="javascript:;">宠物</a>
+        </li>
+        <li>
+            <a href="javascript:;">女鞋</a>
+            <span>/</span>
+            <a href="javascript:;">箱包</a>
+            <span>/</span>
+            <a href="javascript:;">钟表</a>
+            <span>/</span>
+            <a href="javascript:;">珠宝</a>
+        </li>
+        <li>
+            <a href="javascript:;">男鞋</a>
+            <span>/</span>
+            <a href="javascript:;">运动</a>
+            <span>/</span>
+            <a href="javascript:;">户外</a>
+        </li>
+        <li>
+            <a href="javascript:;">房产</a>
+            <span>/</span>
+            <a href="javascript:;">汽车</a>
+            <span>/</span>
+            <a href="javascript:;">汽车用品</a>
+        </li>
+        <li>
+            <a href="javascript:;">母婴</a>
+            <span>/</span>
+            <a href="javascript:;">玩具乐器</a>
+        </li>
+        <li>
+            <a href="javascript:;">食品</a>
+            <span>/</span>
+            <a href="javascript:;">酒类</a>
+            <span>/</span>
+            <a href="javascript:;">生鲜</a>
+            <span>/</span>
+            <a href="javascript:;">特产</a>
+        </li>
+        <li>
+            <a href="javascript:;">艺术</a>
+            <span>/</span>
+            <a href="javascript:;">礼品鲜花</a>
+            <span>/</span>
+            <a href="javascript:;">农资绿植</a>
+        </li>
+        <li>
+            <a href="javascript:;">医药保健</a>
+            <span>/</span>
+            <a href="javascript:;">计生情趣</a>
+        </li>
+        <li>
+            <a href="javascript:;">图书</a>
+            <span>/</span>
+            <a href="javascript:;">文娱</a>
+            <span>/</span>
+            <a href="javascript:;">教育</a>
+            <span>/</span>
+            <a href="javascript:;">电子书</a>
+        </li>
+        <li>
+            <a href="javascript:;">机票</a>
+            <span>/</span>
+            <a href="javascript:;">酒店</a>
+            <span>/</span>
+            <a href="javascript:;">旅游</a>
+            <span>/</span>
+            <a href="javascript:;">生活</a>
+        </li>
+        <li>
+            <a href="javascript:;">理财</a>
+            <span>/</span>
+            <a href="javascript:;">众筹</a>
+            <span>/</span>
+            <a href="javascript:;">白条</a>
+            <span>/</span>
+            <a href="javascript:;">保险</a>
+        </li>
+        <li>
+            <a href="javascript:;">安装</a>
+            <span>/</span>
+            <a href="javascript:;">维修</a>
+            <span>/</span>
+            <a href="javascript:;">清洗</a>
+            <span>/</span>
+            <a href="javascript:;">二手</a>
+        </li>
+        <li>
+            <a href="javascript:;">工业品</a>
+        </li>
+    </ul>
+</body>
+
+</html>
