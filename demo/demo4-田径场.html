@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的大小</title>
+    <style>
+        .box1 {
+            background-color: #DA251E;
+            /* 这里使用css的一个表达式，方便加减乘除计算 */
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*0*2);
+            height: calc(360px*2 - 12.2px*0*2);
+            margin: 100px auto;
+            border: 0.5px white solid;
+            /* 圆角 */
+            border-radius: calc(360px - 12.2px*0) / 50%;
+            /* 盒子大小 */
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*1*2);
+            height: calc(360px*2 - 12.2px*1*2);
+            margin: 12.2px auto;
+            border: 0.5px white solid;
+            border-radius: calc(360px - 12.2px*1) / 50%;
+            box-sizing: border-box;
+        }
+
+        .box3 {
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*2*2);
+            height: calc(360px*2 - 12.2px*2*2);
+            margin: 12.2px auto;
+            border: 0.5px white solid;
+            border-radius: calc(360px - 12.2px*2) / 50%;
+            box-sizing: border-box;
+        }
+
+        .box4 {
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*3*2);
+            height: calc(360px*2 - 12.2px*3*2);
+            margin: 12.2px auto;
+            border: 0.5px white solid;
+            border-radius: calc(360px - 12.2px*3) / 50%;
+            box-sizing: border-box;
+        }
+
+        .box5 {
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*4*2);
+            height: calc(360px*2 - 12.2px*4*2);
+            margin: 12.2px auto;
+            border: 0.5px white solid;
+            border-radius: calc(360px - 12.2px*4) / 50%;
+            box-sizing: border-box;
+        }
+
+        .box6 {
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*5*2);
+            height: calc(360px*2 - 12.2px*5*2);
+            margin: 12.2px auto;
+            border: 0.5px white solid;
+            border-radius: calc(360px - 12.2px*5) / 50%;
+            box-sizing: border-box;
+        }
+
+        .box7 {
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*6*2);
+            height: calc(360px*2 - 12.2px*6*2);
+            margin: 12.2px auto;
+            border: 0.5px white solid;
+            border-radius: calc(360px - 12.2px*6) / 50%;
+            box-sizing: border-box;
+        }
+
+        .box8 {
+            background-color: #00923F;
+            width: calc(1719.2px/2 + 360px*2 - 12.2px*7*2);
+            height: calc(360px*2 - 12.2px*7*2);
+            margin: 12.2px auto;
+            border: 0.5px white solid;
+            border-radius: calc(360px - 12.2px*7) / 50%;
+            box-sizing: border-box;
+        }
+
+        .boxRect {
+            width: calc(1719.2px/2);
+            height: calc(360px*2 - 12.2px*7*2 - 10px);
+            margin: 5px auto;
+            border: 0.5px white solid;
+            box-sizing: border-box;
+        }
+
+        .boxCirc {
+            width: 100px;
+            height: 100px;
+            margin: calc((360px*2 - 12.2px*7*2 - 10px - 100px)/2) auto;
+            border: 0.5px white solid;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+        .boxRectLeft1 {
+            width: 100px;
+            height: 200px;
+            margin-top: calc(-360px*2/2 + 12.2px*7*2/2 + 10px - 200px/2);
+            border: 0.5px white solid;
+            box-sizing: border-box;
+        }
+
+        .boxRectRight1 {
+            width: 100px;
+            height: 200px;
+            margin-top: calc(-360px*2/2 + 12.2px*7*2/2 + 10px + 50px);
+            margin-left: calc(1719.2px/2 - 100px);
+            border: 0.5px white solid;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">
+                <div class="box4">
+                    <div class="box5">
+                        <div class="box6">
+                            <div class="box7">
+                                <div class="box8">
+                                    <div class="boxRect">
+                                        <div class="boxCirc"></div>
+                                        <div class="boxRectLeft1"></div>
+                                        <div class="boxRectRight1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
