@@ -5,117 +5,182 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>盒子的大小</title>
+    <title>田径场</title>
     <style>
+        /* 公共部分 */
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5,
+        .box6,
+        .box7,
+        .box8,
+        .boxRect,
+        .boxColLine,
+        .boxRectLeft1,
+        .boxRectLeft2,
+        .boxCircLeft,
+        .boxCirc,
+        .boxCircRight,
+        .boxRectRight1,
+        .boxRectRight2,
+        .football {
+            /* 盒子大小 */
+            box-sizing: border-box;
+            border: 0.5px white solid;
+        }
+
+        .box2,
+        .box3,
+        .box4,
+        .box5,
+        .box6,
+        .box7,
+        .box8 {
+            margin: 12.2px auto;
+        }
+
+        .boxRectLeft1,
+        .boxRectLeft2,
+        .boxCircLeft {
+            float: left;
+            /* 去除左边框 */
+            border-left: none;
+        }
+
+        .boxCircRight,
+        .boxRectRight1,
+        .boxRectRight2 {
+            float: right;
+            /* 去除右边框 */
+            border-right: none;
+        }
+
+        /* ==========田径场========== */
         .box1 {
             background-color: #DA251E;
             /* 这里使用css的一个表达式，方便加减乘除计算 */
             width: calc(1719.2px/2 + 360px*2 - 12.2px*0*2);
             height: calc(360px*2 - 12.2px*0*2);
             margin: 100px auto;
-            border: 0.5px white solid;
             /* 圆角 */
             border-radius: calc(360px - 12.2px*0) / 50%;
-            /* 盒子大小 */
-            box-sizing: border-box;
         }
 
         .box2 {
             width: calc(1719.2px/2 + 360px*2 - 12.2px*1*2);
             height: calc(360px*2 - 12.2px*1*2);
-            margin: 12.2px auto;
-            border: 0.5px white solid;
             border-radius: calc(360px - 12.2px*1) / 50%;
-            box-sizing: border-box;
         }
 
         .box3 {
             width: calc(1719.2px/2 + 360px*2 - 12.2px*2*2);
             height: calc(360px*2 - 12.2px*2*2);
-            margin: 12.2px auto;
-            border: 0.5px white solid;
             border-radius: calc(360px - 12.2px*2) / 50%;
-            box-sizing: border-box;
         }
 
         .box4 {
             width: calc(1719.2px/2 + 360px*2 - 12.2px*3*2);
             height: calc(360px*2 - 12.2px*3*2);
-            margin: 12.2px auto;
-            border: 0.5px white solid;
             border-radius: calc(360px - 12.2px*3) / 50%;
-            box-sizing: border-box;
         }
 
         .box5 {
             width: calc(1719.2px/2 + 360px*2 - 12.2px*4*2);
             height: calc(360px*2 - 12.2px*4*2);
-            margin: 12.2px auto;
-            border: 0.5px white solid;
             border-radius: calc(360px - 12.2px*4) / 50%;
-            box-sizing: border-box;
         }
 
         .box6 {
             width: calc(1719.2px/2 + 360px*2 - 12.2px*5*2);
             height: calc(360px*2 - 12.2px*5*2);
-            margin: 12.2px auto;
-            border: 0.5px white solid;
             border-radius: calc(360px - 12.2px*5) / 50%;
-            box-sizing: border-box;
         }
 
         .box7 {
             width: calc(1719.2px/2 + 360px*2 - 12.2px*6*2);
             height: calc(360px*2 - 12.2px*6*2);
-            margin: 12.2px auto;
-            border: 0.5px white solid;
             border-radius: calc(360px - 12.2px*6) / 50%;
-            box-sizing: border-box;
         }
 
         .box8 {
             background-color: #00923F;
             width: calc(1719.2px/2 + 360px*2 - 12.2px*7*2);
             height: calc(360px*2 - 12.2px*7*2);
-            margin: 12.2px auto;
-            border: 0.5px white solid;
             border-radius: calc(360px - 12.2px*7) / 50%;
-            box-sizing: border-box;
         }
 
+        /* ==========绿茵足球场========== */
         .boxRect {
             width: calc(1719.2px/2);
             height: calc(360px*2 - 12.2px*7*2 - 10px);
             margin: 5px auto;
-            border: 0.5px white solid;
-            box-sizing: border-box;
-        }
-
-        .boxCirc {
-            width: 100px;
-            height: 100px;
-            margin: calc((360px*2 - 12.2px*7*2 - 10px - 100px)/2) auto;
-            border: 0.5px white solid;
-            border-radius: 50%;
-            box-sizing: border-box;
         }
 
         .boxRectLeft1 {
             width: 100px;
             height: 200px;
-            margin-top: calc(-360px*2/2 + 12.2px*7*2/2 + 10px - 200px/2);
-            border: 0.5px white solid;
-            box-sizing: border-box;
+            margin-top: calc(360px*2/2 - 12.2px*7*2/2 - 10px/2 - 200px/2);
+        }
+
+        .boxRectLeft2 {
+            width: 50px;
+            height: 100px;
+            margin-top: calc(200px/2 - 100px/2);
+        }
+
+        .boxCircLeft {
+            width: 50px;
+            height: 100px;
+            margin-top: calc(360px*2/2 - 12.2px*7*2/2 - 10px/2 - 100px/2);
+            border-radius: 0 100px 100px 0;
+        }
+
+        .boxCirc {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: calc(360px*2/2 - 12.2px*7*2/2 - 10px/2 - 100px/2) auto;
+            margin-left: calc(1719.2px/2/2 - 100px - 50px - 100px/2);
+            border-radius: 50%;
+        }
+
+        .boxCircRight {
+            width: 50px;
+            height: 100px;
+            margin-top: calc(360px*2/2 - 12.2px*7*2/2 - 10px/2 - 100px/2);
+            border-radius: 100px 0 0 100px;
         }
 
         .boxRectRight1 {
             width: 100px;
             height: 200px;
-            margin-top: calc(-360px*2/2 + 12.2px*7*2/2 + 10px + 50px);
-            margin-left: calc(1719.2px/2 - 100px);
-            border: 0.5px white solid;
-            box-sizing: border-box;
+            margin-top: calc(360px*2/2 - 12.2px*7*2/2 - 10px/2 - 200px/2);
+        }
+
+        .boxRectRight2 {
+            width: 50px;
+            height: 100px;
+            margin-top: calc(200px/2 - 100px/2);
+        }
+
+        .boxColLine {
+            width: 0;
+            height: 100%;
+            margin-left: calc(1719.2px/2/2);
+            /* 边框样式 */
+            border: 0.25px white dashed;
+        }
+
+        /* ==========足球========== */
+        .football {
+            float: right;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            margin: 100px;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -131,9 +196,18 @@
                             <div class="box7">
                                 <div class="box8">
                                     <div class="boxRect">
+                                        <div class="boxRectLeft1">
+                                            <div class="boxRectLeft2"></div>
+                                        </div>
+                                        <div class="boxCircLeft"></div>
                                         <div class="boxCirc"></div>
-                                        <div class="boxRectLeft1"></div>
-                                        <div class="boxRectRight1"></div>
+                                        <div class="boxRectRight1">
+                                            <div class="boxRectRight2"></div>
+                                        </div>
+                                        <div class="boxCircRight"></div>
+                                        <!-- 足球 -->
+                                        <div class="football"></div>
+                                        <div class="boxColLine"></div>
                                     </div>
                                 </div>
                             </div>

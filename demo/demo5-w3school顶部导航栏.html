@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3school</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* 去除默认样式 */
+        a {
+            text-decoration: none;
+        }
+
+        /* ul整体布局 */
+        .menu {
+            width: 1211px;
+            height: 48px;
+            background-color: #E8E7E3;
+            margin: 100px auto;
+        }
+
+        /* li整体布局 */
+        .nav {
+            /* 浮动li元素 */
+            float: left;
+            width: 173px;
+            line-height: 48px;
+        }
+
+        .nav a {
+            /* 升级为块元素 */
+            display: block;
+            /* 内容水平居中 */
+            text-align: center;
+            /* 字体样式 */
+            font-size: 14px;
+            color: #777777;
+            font-family: Verdana, Arial, '微软雅黑', '宋体'
+        }
+
+        /* a悬浮效果 */
+        .nav a:hover {
+            background-color: #3F3F3F;
+            color: #E8E7E3;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li class="nav"><a href="#">HTML/CSS</a></li>
+        <li class="nav"><a href="#">Browser Side</a></li>
+        <li class="nav"><a href="#">Server Side</a></li>
+        <li class="nav"><a href="#">Programming</a></li>
+        <li class="nav"><a href="#">XML</a></li>
+        <li class="nav"><a href="#">Web Building</a></li>
+        <li class="nav"><a href="#">Reference</a></li>
+    </ul>
+</body>
+
+</html>

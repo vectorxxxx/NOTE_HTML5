@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单布局</title>
+    <style>
+        /* 公共部分 */
+        header,
+        main,
+        footer {
+            width: 1000px;
+            margin: 10px auto;
+        }
+
+        main nav,
+        main article,
+        main aside {
+            float: left;
+            /* 虽然设置浮动了，但整体大小是被内容撑开的，所以设置一个高度 */
+            height: 100%;
+        }
+
+        .bottom .left,
+        .bottom .middle,
+        .bottom .right {
+            float: left;
+            width: 220px;
+            height: 100%;
+        }
+
+        /* ==========整体布局-上========== */
+        header {
+            height: 100px;
+            background-color: silver;
+        }
+
+        /* ==========整体布局-中========== */
+        main {
+            height: 400px;
+            background-color: #bfa;
+        }
+
+
+        /* ------左边栏------ */
+        main nav {
+            width: 150px;
+            background-color: red;
+        }
+
+        /* ------中心------ */
+        main article {
+            width: 680px;
+            background-color: green;
+            margin: 0 10px;
+        }
+
+        /* ---上--- */
+        article .top {
+            height: 190px;
+            background-color: yellow;
+            margin-bottom: 10px;
+        }
+
+        /* ---下--- */
+        article .bottom {
+            height: 200px;
+            background-color: orange;
+        }
+
+
+        /* 左 */
+        .bottom .left {
+            background-color: lightblue;
+        }
+
+        /* 中 */
+        .bottom .middle {
+            background-color: gray;
+            margin: 0 10px;
+        }
+
+        /* 右 */
+        .bottom .right {
+            background-color: wheat;
+        }
+
+        /* ------右边栏------ */
+        main aside {
+            width: 150px;
+            background-color: blue;
+        }
+
+        /* ==========整体布局-下========== */
+        footer {
+            height: 100px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- 页眉 -->
+    <header></header>
+    <!-- 主体 -->
+    <main>
+        <!-- 左边栏 -->
+        <nav></nav>
+        <!-- 中心 -->
+        <article>
+            <!-- 内容上 -->
+            <div class="top"></div>
+            <!-- 内容下 -->
+            <div class="bottom">
+                <!-- 内容左 -->
+                <div class="left"></div>
+                <!-- 内容中 -->
+                <div class="middle"></div>
+                <!-- 内容右 -->
+                <div class="right"></div>
+            </div>
+        </article>
+        <!-- 右边栏 -->
+        <aside></aside>
+    </main>
+    <!-- 页脚 -->
+    <footer></footer>
+</body>
+
+</html>
