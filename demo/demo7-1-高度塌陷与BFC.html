@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度塌陷与BFC</title>
+    <style>
+        .outer {
+            border: 10px olive solid;
+
+            /* 设置浮动（不推荐），会覆盖down元素 */
+            /* float: left; */
+
+            /* 设置为行内块元素（不推荐），不再独占一行，宽度减少 */
+            /* display: inline-block; */
+
+            /* 设置`overflow`为非`visible`值 */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* overflow: auto; */
+        }
+
+        .inner {
+            /* 子元素设置宽度，父元素默认被撑开 */
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 设置float后，父元素会出现高度塌陷 */
+            float: left;
+        }
+
+        .down {
+            width: 300px;
+            height: 300px;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <div class="down"></div>
+</body>
+
+</html>
