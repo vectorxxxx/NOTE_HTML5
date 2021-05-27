@@ -126,7 +126,7 @@ BFC（Block Formatting Context）块级格式化环境
 
 
 
-## 4. after伪元素
+## 4. after
 
 我们学习了上面知识后，了解了高度塌陷问题的解决方式，其中主要有
 
@@ -152,7 +152,7 @@ BFC（Block Formatting Context）块级格式化环境
 
 A：我们知道，网页的结构思想是：结构+表现+行为。在box2下直接定义一个box3，属于结构；而使用伪元素选择器，属于表现
 
-而定义box3的目的是为了撑起box1的内容，属于表现，而不是结构，所以在css中定义`::after`更符合网页的编程思想
+而高度塌陷问题属于表现问题，定义box3的目的是为了撑起box1的内容，属于表现，而不是结构，所以在css中定义`::after`更符合网页的编程思想
 
 **Q2：为什么需要使用`display: block`呢？**
 
@@ -162,10 +162,130 @@ A：因为默认情况下，`::after`伪元素是一个行内元素，如果不�
 
 
 
-## 补充：小技巧
+## 5. clearfix
 
-1. 在vscode中，我们可以使用css选择器组合，快速生成div代码块
+我们在前面《06-盒模型》一节中说过垂直布局中边距重叠的问题：相邻的垂直方向外边距会发生重叠现象
 
-   ![image-20210526220551778](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210526220759.png)
+![动画2021-30](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528015116.gif)
 
-2. 使用`alt + shift + ↑`或`alt + shift + ↓`快捷键，快速复制多行代码
+如上图所示，子元素设置了一个`margin-top`之后，父元素跟随子元素一起进行了移动
+
+即我们之前说的<q>父子元素间相邻外边距，子元素会传递给父元素（上外边距）</q>
+
+聪明的小伙伴已经想到了，用刚才说的伪元素选择器啊
+
+![img](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528015619.gif)
+
+好，我们先来看下效果
+
+![动画2021-29](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528015332.gif)
+
+貌似是没有任何变化，到底是什么地方不对呢？
+
+![img](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528015732.jpg)
+
+我们再来回顾下使用`after`伪元素的心路历程：
+
+- 使用无内容的box3撑起box1 ==》表现代替结构（`::after`代替box3）
+- `clear`清除浮动对元素产生的影响（还记得`clear`的原理么？）
+
+![img](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528020034.jpg)
+
+其实就是给元素设置了一个`margin-top`属性，不过这个在开发者工具中是看不到的
+
+既然如此，就相当于在box2下面添加一个box3，然后给box3设置一个`margin-top`属性
+
+到此为止，
+
+∵  <q>相邻的垂直方向外边距</q> 这个条件仍然满足
+
+∴  <q>会发生重叠现象</q>这个结论也依然成立
+
+具体点就是，<q>父子元素间相邻外边距，子元素会传递给父元素（上外边距）</q>，表现为box1和box2同步往下移动
+
+那我们应该怎么做才能解决这个问题？ ~~凭你们朴素的情感，应该怎么判？~~ 当然就是让上述条件不满足呗！
+
+怎么能够不满足？当然是让两个元素垂直外边距不相邻啊！
+
+好，多说无益，我们直接上代码看效果！
+
+![动画2021-28](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528022156.gif)
+
+我们用了`before`伪元素选择器，目的当然是让box1和box2的外边距不相邻，但是好像并没有效果
+
+我们再换成`display: inline-block`属性看看
+
+![动画2021-27](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528022724.gif)
+
+好像是解决了父元素布局的问题，但是子元素怎么还往下跑了一段距离？ ~~是谁给的勇气？~~
+
+因为`inline-block`兼顾行内元素和块元素的特点，既可以设置宽高也不独占一行
+
+在没有设置宽高时，会存在一个默认高度，所以`inline-block`仍然行不通
+
+还有一个属性，`display: table`
+
+![动画2021-26](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528024033.gif)
+
+Bingo！实现了我们最终想要的效果
+
+**Q1：为什么没有使用clear属性？**
+
+A：不是说了吗？`clear`是为了清除浮动对布局的影响，我们现在没有浮动的元素啊，我们要讨论的也不是浮动的问题
+
+**Q2：display不是还有一个`none`属性么，为什么不用呢？**
+
+A：`none`属性是不占据位置，但是也不能让元素相邻的外边距分离啊
+
+**Q3：为什么`table`值就可以呢？**
+
+A：这个问题问的非常好，算是问到点上了！我们上面在讲开启BFC的一些方法的时候，也提到了该属性。而且，应该牢记的是，元素开启BFC后的其中一个特点就是 <q><mark>父子元素外边距不会重叠</mark></q>。当然，这里也需要合理选择伪元素选择器，使其外边距不相邻才行
+
+另外，总结一下：
+
+- 高度塌陷问题，一般用`::after`
+- 外边距重叠问题，一般用`::before`
+
+不知道到这里，大家能不能想明白这两件事情
+
+![img](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528025723.jpeg)
+
+那么问题来了，有没有一个两全其美的办法，既可以解决高度塌陷，又可以解决外边距重叠呢？
+
+![img](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528030434.jpg)
+
+当然有！`clearfix` 这个样式就可以同时解决高度塌陷和外边距重叠的问题
+
+当你在遇到这些问题时，直接使用`clearfix`这个类即可，他就可以帮你轻松搞定css中的两大难题
+
+```css
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+```
+
+其中`.clearfix::before`是为了解决外边距重叠问题
+
+```css
+.clearfix::before{
+    content: '';
+    display: table;
+}
+```
+
+`.clearfix::after`是为了解决高度塌陷问题
+
+```css
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+```
+
+两者合在一起，就可以完美地解决高度塌陷和外边距重叠这两大“世纪难题”了
+
+![image-20210528030932616](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528030933.png)
