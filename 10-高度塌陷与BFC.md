@@ -110,7 +110,7 @@ BFC（Block Formatting Context）块级格式化环境
 
 由于box1的浮动，导致box3位置上移也就是box3受到了box1浮动的影响，位置发生了改变（注意，这里文字并没有被覆盖，《09-浮动》一节说过浮动的特点，其中第7点就是“文字环绕”的问题）
 
-![img](file:///C:\Users\Archimedes\Documents\Tencent Files\1402758731\Image\C2C\D946B8F36926DBC3A1C6CE68BFE8E716.jpg)
+![img](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528194419.jpg)
 
 如果我们不希望某个元素因为其他元素浮动的影响而改变位置，可以通过`clear`属性来清除浮动元素对当前元素所产生的影响
 
@@ -289,3 +289,4 @@ A：这个问题问的非常好，算是问到点上了！我们上面在讲开�
 两者合在一起，就可以完美地解决高度塌陷和外边距重叠这两大“世纪难题”了
 
 ![image-20210528030932616](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210528030933.png)
+

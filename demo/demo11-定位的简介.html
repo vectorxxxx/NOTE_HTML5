@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="clearfix">
+    <title>定位的简介</title>
+    <style>
+        div {
+            font-size: 50px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* 开启相对定位 */
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /* 开启相对定位 */
+            position: relative;
+            top: -300px;
+            left: 100px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 开启相对定位 */
+            position: relative;
+            top: -150px;
+            left: 50px;
+        }
+
+        .lorem {
+            /* 开启相对定位 */
+            position: relative;
+            /* top: -500px; */
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box3">3</div>
+    <div class="box2">2</div>
+
+    <span class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod voluptatibus tempore eaque
+        illum fugiat
+        voluptate consequuntur odit, iste ut dolore sunt quas earum consequatur culpa, repellat debitis voluptatem?
+        Nihil.</span>
+</body>
+
+</html>
