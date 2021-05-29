@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="层级">
+    <title>层级</title>
+    <style>
+        div {
+            font-size: 40px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3
+        <div class="box4">4</div>
+    </div>
+</body>
+
+</html>
