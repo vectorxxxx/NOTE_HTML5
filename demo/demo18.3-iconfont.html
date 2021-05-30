@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="iconfont">
+    <title>iconfont</title>
+    <link rel="stylesheet" href="/font/iconfont/iconfont.css">
+    <style>
+        i.iconfont {
+            font-size: 100px;
+        }
+
+        p::before {
+            content: '\e811';
+            font-family: 'iconfont';
+            font-size: 50px;
+        }
+
+        /* 3、通过在线连接：这里link和@font-face择其一即可  */
+        @font-face {
+            font-family: 'iconfont';
+            /* Project id 2580407 */
+            src: url('//at.alicdn.com/t/font_2580407_c0kpuhebb7r.woff2?t=1622373966454') format('woff2'),
+                url('//at.alicdn.com/t/font_2580407_c0kpuhebb7r.woff?t=1622373966454') format('woff'),
+                url('//at.alicdn.com/t/font_2580407_c0kpuhebb7r.ttf?t=1622373966454') format('truetype');
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1、通过字符实体设置 -->
+    <i class="iconfont">&#xe810;</i>
+    <i class="iconfont">&#xe811;</i>
+    <i class="iconfont">&#xe812;</i>
+    <i class="iconfont">&#xe813;</i>
+
+    <!-- 2、通过伪元素设置 -->
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam deserunt tempore fugit quos eaque, ipsa rerum
+        suscipit iure cumque aspernatur esse cupiditate nihil quas nulla odit? Sequi accusantium labore maiores.</p>
+
+</body>
+
+</html>
