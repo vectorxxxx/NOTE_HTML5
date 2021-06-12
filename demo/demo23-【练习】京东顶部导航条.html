@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="京东顶部导航条">
+    <title>京东顶部导航条</title>
+    <!-- 引入Reset样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 引入font-awsesome -->
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <style>
+        /*==============整体布局============== */
+        .outer {
+            width: 100%;
+            background-color: #e3e4e5;
+            border-bottom: 1px #ddd solid;
+            position: relative;
+        }
+
+        .inner {
+            width: 1190px;
+            height: 30px;
+            line-height: 30px;
+            margin: auto;
+        }
+
+        /* 左ul */
+        .ul-left {
+            float: left;
+        }
+
+        /* 右ul */
+        .ul-right {
+            float: right;
+        }
+
+        .ul-right li {
+            float: left;
+        }
+
+        /*==============整体细节============== */
+
+        /* 统一设置链接的字体颜色、大小、位置等 */
+        .inner a {
+            /* 去除所有链接的默认样式 */
+            text-decoration: none;
+            /* 添加自定义样式 */
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+            color: #999;
+            height: 30px;
+            line-height: 30px;
+            vertical-align: 1px;
+        }
+
+        /* 统一设置悬浮样式 */
+        .inner li:nth-of-type(-n+7) a:hover {
+            color: red;
+        }
+
+        /* 统一设置其他的字体颜色 */
+        .ul-right .fa-map-marker-alt,
+        .ul-right .register,
+        .ul-right .purchase {
+            color: red;
+        }
+
+        /* ============左边细节============ */
+        .ul-left .fa-map-marker-alt {
+            font-size: 14px;
+            color: #f10215;
+            margin-left: 10px;
+        }
+
+        .ul-left .location {
+            width: 50px;
+            height: 30px;
+            padding-right: 10px;
+            /* 占据位置但不显示边框 */
+            border: 1px transparent solid;
+            border-bottom: none;
+            /* 需要有一个高的优先级 */
+            position: relative;
+            z-index: 1000;
+        }
+
+        /* 定位信息悬浮样式 */
+        .ul-left:hover .location {
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            border-bottom: none;
+        }
+
+        .ul-left .locations {
+            width: 402px;
+            height: 580px;
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+            /* 不能影响布局，所以需要脱离文档流*/
+            position: absolute;
+            top: 30px;
+            /* 默认看不见，但仍然存在 */
+            visibility: hidden;
+            /* 但要覆盖下方内容，所以需要有一个相对较高的优先级 */
+            z-index: 999;
+        }
+
+        /* 定位详情悬浮样式 */
+        .ul-left:hover .locations {
+            visibility: visible;
+        }
+
+        /* ============右边细节============ */
+        .ul-right .spacer {
+            display: inline-block;
+            width: 1px;
+            height: 9px;
+            line-height: 9px;
+            background-color: #ccc;
+            /* 左右间距 */
+            margin: 11px 5px;
+        }
+
+        .ul-right li:not(.spacer) {
+            padding: 0 7px;
+        }
+
+        .ul-right .fa-angle-down {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 外部div：控制整体位置 -->
+    <div class="outer">
+        <!-- 内部div：控制偏移位置 -->
+        <div class="inner">
+            <!-- 位置信息 -->
+            <ul class="ul-left">
+                <li class="location">
+
+                    <a href="javascript:;">
+                        <!-- 定位图标 -->
+                        <i class="fas fa-map-marker-alt"></i>
+                        <!-- 定位地址 -->
+                        <span>江苏</span>
+                    </a>
+                </li>
+                <li class="locations">
+                    <div class="location-details"></div>
+                </li>
+            </ul>
+            <!-- 导航菜单 -->
+            <ul class="ul-right">
+                <li>
+                    <a href="javascript:;">你好，请登录</a>
+                    <a href="javascript:;" class="register">免费注册</a>
+                </li>
+                <li class='spacer'></li>
+                <li>
+                    <a href="javascript:;">我的订单</a>
+                </li>
+                <li class='spacer'></li>
+                <li>
+                    <a href="javascript:;">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class='spacer'></li>
+                <li>
+                    <a href="javascript:;">京东会员</a>
+                </li>
+                <li class='spacer'></li>
+                <li>
+                    <a href="javascript:;" class="purchase">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class='spacer'></li>
+                <li>
+                    <a href="javascript:;">客户服务</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class='spacer'></li>
+                <li>
+                    <a href="javascript:;">网站导航</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class='spacer'></li>
+                <li>
+                    <a href="javascript:;">手机京东</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam quis mollitia tempore quasi eveniet, at
+        cumque suscipit velit. Dolor pariatur reiciendis magni possimus repudiandae doloremque culpa corporis quisquam
+        optio?</div>
+</body>
+
+</html>

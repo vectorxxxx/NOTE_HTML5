@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="背景">
+    <title>背景</title>
+    <style>
+        .box1 {
+            height: 500px;
+            width: 500px;
+            overflow: auto;
+            border: 20px red double;
+            padding: 10px;
+            /* 背景色 */
+            background-color: darksalmon;
+            /* 背景图 */
+            background-image: url('/assets/背景/背景.png');
+            /* 背景图重复方式 */
+            background-repeat: no-repeat;
+            /* 背景图偏移位置 */
+            background-position: 0 0;
+            /* 背景图偏移量计算的原点 */
+            background-origin: content-box;
+            /* 背景范围 */
+            background-clip: content-box;
+            /* 背景图片大小 */
+            background-size: contain;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 1000px;
+            background-color: orange;
+            background-image: url("assets/背景/背景2.jpg");
+            background-repeat: no-repeat;
+            background-position: 50px 50px;
+            /* 背景图片是否跟随移动 */
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et deserunt atque, dolorem rerum error iure optio
+            odit obcaecati alias molestias! Cupiditate ratione assumenda maiores. Recusandae harum obcaecati excepturi
+            aperiam deleniti?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis corrupti numquam provident iusto
+            nesciunt magni accusantium, blanditiis doloremque facilis saepe velit deleniti natus adipisci in officiis
+            nihil excepturi. Magni, fuga.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto eos unde officia aperiam hic
+            a consequatur! Iusto facilis recusandae doloremque accusamus soluta obcaecati provident? Vero, sunt.
+            Deserunt, voluptatibus possimus.
+        </div>
+    </div>
+</body>
+
+</html>
