@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="雪碧图">
+    <title>雪碧图</title>
+    <style>
+        a:link {
+            display: block;
+            width: 93px;
+            height: 29px;
+            background: url("assets/背景/练习3-雪碧图/btn.png");
+            /* 默认值，可以不设置 */
+            background-position: 0 0;
+        }
+
+        a:hover {
+            /* 设置水平方向的一个偏移量；注意是向左移动，所以是负值 */
+            background-position: -93px 0;
+        }
+
+        a:active {
+            /* 设置水平方向的一个偏移量；注意是向左移动，所以是负值 */
+            background-position: calc(-93px*2) 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="javascript:;"></a>
+</body>
+
+</html>
