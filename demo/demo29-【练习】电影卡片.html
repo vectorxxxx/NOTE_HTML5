@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="电影卡片">
+    <title>电影卡片</title>
+    <!-- 引入reset样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 引入fontawesome字体样式 -->
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <style>
+        /* ============整体布局============ */
+        .outer-wrapper {
+            width: 240px;
+            /* 居中对齐：不是必须的，只是为了展示好看 */
+            margin: 100px auto;
+            /* 外部边框、阴影 */
+            border: 1px #e9e9e9 solid;
+            border-radius: 2px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+        }
+
+        /* ============处理图片============ */
+        .img-wrapper img {
+            /* 因为图片默认基线对齐，所以需要修改垂直对齐方式 */
+            /* border: 1px black solid; 便于调试 */
+            vertical-align: bottom;
+        }
+
+        /* ============处理文字信息============ */
+        .info-wrapper {
+            margin: 13px 21px;
+            color: #acaaaa;
+            font-family: 'Open Sans';
+        }
+
+        .info-wrapper .title {
+            margin-bottom: 15px;
+            font-size: 17.99px;
+            color: #717171;
+        }
+
+        .info-wrapper .tag {
+            margin-bottom: 23px;
+            font-size: 13.99px;
+        }
+
+        .tag .fa-map-marker-alt {
+            margin-right: 7px;
+        }
+
+        .info-wrapper .content {
+            font-size: 13px;
+            line-height: 21px;
+        }
+
+
+        /* ============处理底部信息============ */
+        .star-wrapper {
+            height: 16px;
+            padding: 15px 33px 15px 21px;
+            border-top: 1px #e9e9e9 solid;
+            color: #ddd;
+        }
+
+        .star-wrapper .star {
+            float: left;
+        }
+
+        .star .light {
+            color: #b9cb41;
+        }
+
+        .star-wrapper .facebook {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-wrapper">
+        <div class="img-wrapper">
+            <!-- Picture -->
+            <img src="/assets/电影卡片/1.jpg" alt="" />
+        </div>
+        <div class="info-wrapper">
+            <!-- Title -->
+            <h2 class="title">Animation films</h2>
+            <!-- Tag -->
+            <h3 class=tag><i class="fas fa-map-marker-alt"></i>Animations</h3>
+            <!-- Content -->
+            <p class="content">Lorem lpsum is simply dummy text of the printing & typesetting industry.</p>
+        </div>
+        <div class="star-wrapper">
+            <!-- Star -->
+            <div class="star">
+                <i class="fas fa-star light"></i>
+                <i class="fas fa-star light"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class='facebook'>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
