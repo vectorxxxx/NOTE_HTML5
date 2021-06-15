@@ -21,6 +21,11 @@
 }
 
 /* 内部wrapper */
+.top-inner-wrapper {
+  width: 1226px;
+  margin: auto;
+}
+
 .top-inner-wrapper a,
 .top-inner-wrapper .sep {
   height: 40px;
