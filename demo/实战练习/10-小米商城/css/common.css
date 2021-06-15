@@ -16,3 +16,8 @@ body {
   display: table;
   clear: both;
 }
+
+.common-width {
+  width: 1226px;
+  margin: auto;
+}

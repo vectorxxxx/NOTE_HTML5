@@ -1,0 +1,147 @@
+/* ============顶部导航栏============ */
+
+/* 外部wrapper */
+.top-outer-wrapper {
+  height: 40px;
+  background-color: #333;
+}
+
+.top-outer-wrapper a {
+  color: #b0b0b0;
+  font-size: 12px;
+}
+
+.top-outer-wrapper a:hover {
+  color: #fff;
+}
+
+.top-outer-wrapper span {
+  color: #3c423c;
+  font-size: 12px;
+}
+
+/* 内部wrapper */
+.top-inner-wrapper a,
+.top-inner-wrapper .sep {
+  height: 40px;
+  line-height: 40px;
+  /* 居中对齐 */
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.top-inner-wrapper .sep {
+  display: block;
+  margin: 0 6px;
+  font-size: 12px;
+  color: #424242;
+}
+
+/* ======左侧部分====== */
+.top-left-wrapper {
+  float: left;
+}
+
+.top-left-wrapper li {
+  float: left;
+}
+
+/* 下载APP */
+.top-left-wrapper .app-wrapper {
+  position: relative;
+}
+
+.app-wrapper:hover .download-app::after {
+  position: absolute;
+  top: 32px;
+  left: 12px;
+  /* 三角形 */
+  content: "";
+  height: 0;
+  width: 0;
+  border: 8px solid;
+  border-color: transparent transparent white transparent;
+  border-top: none;
+}
+
+.download-app .appcode {
+  overflow: hidden;
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  width: 124px;
+  height: 0px;
+  box-shadow: 0 1px 5px #aaa;
+  color: #333;
+  font-size: 14px;
+  transition: height 0.2s;
+}
+
+.download-app:hover .appcode {
+  display: block;
+  height: 148px;
+}
+
+.download-img {
+  /* 图片的基线对齐要处理 */
+  display: table-cell;
+  vertical-align: bottom;
+  width: 90px;
+  height: 90px;
+  margin: 18px 17px 0;
+}
+
+/* ======右侧部分====== */
+.top-right-wrapper {
+  float: right;
+}
+
+.top-right-wrapper li {
+  float: left;
+}
+
+/* 购物车 */
+.shop-wrapper {
+  position: relative;
+}
+
+.shop-wrapper .shop {
+  display: block;
+  width: 120px;
+  background-color: #424242;
+  margin-left: 32px;
+}
+
+.shop-wrapper .shop::before {
+  content: "\f07a";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin: 4px;
+}
+
+.shop-wrapper:hover .shop {
+  background-color: #fff;
+  color: #ff6700;
+}
+
+.shop-wrapper .shop::after {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  content: "";
+  width: 316px;
+  height: 0px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px #aaa;
+  color: #424242;
+  transition: all 0.2s;
+}
+
+.shop-wrapper:hover > .shop::after {
+  display: block;
+  content: "购物车中还没有商品，赶紧选购吧！";
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
