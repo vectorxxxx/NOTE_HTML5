@@ -1,87 +1,152 @@
-/* ============次顶部导航栏============ */
-.topbar-wrapper {
+/* ============顶部导航栏============ */
+
+/* 外部wrapper */
+.topbar-outer-wrapper {
+  height: 40px;
+  background-color: #333;
+}
+
+.topbar-outer-wrapper a {
+  color: #b0b0b0;
+  font-size: 12px;
+}
+
+.topbar-outer-wrapper a:hover {
+  color: #fff;
+}
+
+.topbar-outer-wrapper span {
+  color: #3c423c;
+  font-size: 12px;
+}
+
+/* 内部wrapper */
+.topbar-inner-wrapper {
   width: 1226px;
   margin: auto;
 }
 
-/* ======logo====== */
-.logo-wrapper {
-  float: left;
-  margin-top: 22px;
-}
-
-.logo-wrapper img {
-  width: 56px;
-  height: 56px;
-}
-
-/* ======item====== */
-.item-wrapper {
-  float: left;
-  margin-left: 170px;
-}
-
-.item-wrapper ul {
+.topbar-inner-wrapper a,
+.topbar-inner-wrapper .sep {
+  height: 40px;
+  line-height: 40px;
+  /* 居中对齐 */
   display: table-cell;
-  vertical-align: middle;
   text-align: center;
-}
-
-.item-wrapper ul li {
-  float: left;
-  padding: 0 10px;
-}
-
-.item-wrapper ul li:hover a {
-  color: #ff6700;
-}
-
-.item-wrapper ul li a {
-  display: table-cell;
-  height: 100px;
   vertical-align: middle;
-  color: #333;
-  font-size: 16px;
 }
 
-/* ======search====== */
-.search-wrapper {
+.topbar-inner-wrapper .sep {
+  display: block;
+  margin: 0 6px;
+  font-size: 12px;
+  color: #424242;
+}
+
+/* ======左侧部分====== */
+.topbar-left-wrapper {
+  float: left;
+}
+
+.topbar-left-wrapper li {
+  float: left;
+}
+
+/* 下载APP */
+.topbar-left-wrapper .app-wrapper {
+  position: relative;
+}
+
+.app-wrapper:hover .download-app::after {
+  position: absolute;
+  topbar: 32px;
+  left: 12px;
+  /* 三角形 */
+  content: "";
+  height: 0;
+  width: 0;
+  border: 8px solid;
+  border-color: transparent transparent white transparent;
+  border-topbar: none;
+}
+
+.download-app .appcode {
+  overflow: hidden;
+  position: absolute;
+  topbar: 40px;
+  left: -40px;
+  width: 124px;
+  height: 0px;
+  box-shadow: 0 1px 5px #aaa;
+  color: #333;
+  font-size: 14px;
+  transition: height 0.2s;
+}
+
+.download-app:hover .appcode {
+  display: block;
+  height: 148px;
+}
+
+.download-img {
+  /* 图片的基线对齐要处理 */
+  display: table-cell;
+  vertical-align: bottom;
+  width: 90px;
+  height: 90px;
+  margin: 18px 17px 0;
+}
+
+/* ======右侧部分====== */
+.topbar-right-wrapper {
   float: right;
 }
 
-.search-wrapper .search-form {
-  display: table-cell;
-  height: 100px;
-  vertical-align: middle;
-  text-align: center;
+.topbar-right-wrapper li {
+  float: left;
 }
 
-.search-wrapper .search-input,
-.search-wrapper .fa-search {
-  display: inline-block;
-  height: 48px;
-  /* 去除默认样式 */
-  background-color: transparent;
-  border: 1px solid #e0e0e0;
-  outline: none;
+/* 购物车 */
+.shop-wrapper {
+  position: relative;
 }
 
-.search-wrapper .search-input {
-  width: 223px;
-  padding: 0 10px;
+.shop-wrapper .shop {
+  display: block;
+  width: 120px;
+  background-color: #424242;
+  margin-left: 32px;
 }
 
-.search-wrapper .fa-search {
-  width: 38px;
-  margin-left: -4px;
-  margin-bottom: -6px;
-  border-left: none;
-  font-size: 18px;
-  color: #616161;
+.shop-wrapper .shop::before {
+  content: "\f07a";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin: 4px;
 }
 
-.search-wrapper .fa-search:hover {
-  background-color: #ff6700;
-  color: #fff;
+.shop-wrapper:hover .shop {
+  background-color: #fff;
+  color: #ff6700;
+}
+
+.shop-wrapper .shop::after {
+  position: absolute;
+  topbar: 40px;
+  right: 0;
+  content: "";
+  width: 316px;
+  height: 0px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px #aaa;
+  color: #424242;
   transition: all 0.2s;
+}
+
+.shop-wrapper:hover > .shop::after {
+  display: block;
+  content: "购物车中还没有商品，赶紧选购吧！";
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
 }

@@ -21,18 +21,16 @@
   height: 420px;
 }
 
-.nav-wrapper ul li {
-  position: relative;
-}
-
 .nav-wrapper ul li:hover {
   background-color: #ff6700;
 }
 
 .nav-wrapper ul li a {
+  display: block;
   height: 42px;
   line-height: 42px;
   padding-left: 30px;
+  position: relative;
   color: white;
   font-size: 14px;
 }
@@ -48,7 +46,7 @@
   font-size: 18px;
 }
 
-/* ======展开导航栏====== */
+/* ======左侧展开导航栏====== */
 .nav-expand-wrapper {
   width: 992px;
   height: 458px;
@@ -67,12 +65,16 @@
   padding: 1px 0;
 }
 
-.nav-expand-wrapper ul li {
+.nav-expand-wrapper a {
   float: left;
   width: 248px;
   height: 76px;
   line-height: 76px;
   position: relative;
+}
+
+.nav-expand-wrapper a:hover {
+  color: #ff6700;
 }
 
 .nav-expand-wrapper img {

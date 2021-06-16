@@ -22,7 +22,7 @@ if __name__ == "__main__":
     soup = BeautifulSoup(r.content, 'lxml')
 
     # 左侧导航栏
-    out_path = os.getcwd() + '/img/左侧导航栏icon/'
+    out_path = os.getcwd() + '/img/左侧展开导航栏icon/'
     categoryList = soup.find_all('li', {'class', 'category-item'})
     for category in categoryList:
         title = category.find('a').text.strip()
@@ -47,8 +47,8 @@ if __name__ == "__main__":
             image = Image.open(BytesIO(html.content))
             image.save(filepath)
 
-    # 次顶部导航栏
-    out_path = os.getcwd() + '/img/次顶部导航栏img/'
+    # 头部导航栏
+    out_path = os.getcwd() + '/img/头部导航栏img/'
     categoryList = soup.find_all('li', {'class', 'nav-item'})
     for category in categoryList:
         title = category.find('span').text

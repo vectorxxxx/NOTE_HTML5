@@ -1,0 +1,87 @@
+/* ============头部导航栏============ */
+.head-wrapper {
+  width: 1226px;
+  margin: auto;
+}
+
+/* ======head-logo====== */
+.head-logo-wrapper {
+  float: left;
+  margin-top: 22px;
+}
+
+.head-logo-wrapper img {
+  width: 56px;
+  height: 56px;
+}
+
+/* ======head-item====== */
+.head-item-wrapper {
+  float: left;
+  margin-left: 170px;
+}
+
+.head-item-wrapper ul {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.head-item-wrapper ul li {
+  float: left;
+  padding: 0 10px;
+}
+
+.head-item-wrapper ul li:hover a {
+  color: #ff6700;
+}
+
+.head-item-wrapper ul li a {
+  display: table-cell;
+  height: 100px;
+  vertical-align: middle;
+  color: #333;
+  font-size: 16px;
+}
+
+/* ======head-search====== */
+.head-search-wrapper {
+  float: right;
+}
+
+.head-search-wrapper .head-search-form {
+  display: table-cell;
+  height: 100px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.head-search-wrapper .head-search-input,
+.head-search-wrapper .fa-head-search {
+  display: inline-block;
+  height: 48px;
+  /* 去除默认样式 */
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  outline: none;
+}
+
+.head-search-wrapper .head-search-input {
+  width: 223px;
+  padding: 0 10px;
+}
+
+.head-search-wrapper .fa-head-search {
+  width: 38px;
+  margin-left: -4px;
+  margin-bottom: -6px;
+  border-left: none;
+  font-size: 18px;
+  color: #616161;
+}
+
+.head-search-wrapper .fa-head-search:hover {
+  background-color: #ff6700;
+  color: #fff;
+  transition: all 0.2s;
+}
