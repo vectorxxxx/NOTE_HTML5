@@ -1,4 +1,9 @@
 /* ============头部导航栏============ */
+.head-outer-wrapper {
+  width: 100%;
+  position: relative;
+}
+
 .head-wrapper {
   width: 1226px;
   margin: auto;
@@ -7,18 +12,42 @@
 /* ======head-logo====== */
 .head-logo-wrapper {
   float: left;
-  margin-top: 22px;
-}
-
-.head-logo-wrapper img {
   width: 56px;
   height: 56px;
+  margin-top: 22px;
+  position: relative;
+  overflow: hidden;
+  /* 隐藏搜索引擎需要但不显示的文字 */
+  text-indent: -9999px;
+}
+
+.head-logo-wrapper a {
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/logo-mi2.png");
+  background-size: 56px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.2s;
+}
+
+.head-logo-wrapper .head-home {
+  left: -56px;
+}
+
+.head-logo-wrapper:hover .head-home {
+  left: 0;
+}
+
+.head-logo-wrapper:hover .head-logo {
+  left: 56px;
 }
 
 /* ======head-item====== */
 .head-item-wrapper {
   float: left;
-  margin-left: 170px;
+  margin-left: 62px;
 }
 
 .head-item-wrapper ul {
@@ -32,16 +61,50 @@
   padding: 0 10px;
 }
 
-.head-item-wrapper ul li:hover a {
+.head-item-all {
+  visibility: hidden;
+}
+
+.head-item-wrapper > ul > li:hover > a {
   color: #ff6700;
 }
 
-.head-item-wrapper ul li a {
+.head-item-wrapper > ul > li > a {
   display: table-cell;
   height: 100px;
   vertical-align: middle;
   color: #333;
   font-size: 16px;
+}
+
+/* item-expand */
+.item-expand {
+  width: 100%;
+  height: 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid transparent;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 100;
+  transition: height 0.4s, border-top 0.4s;
+}
+
+/* .item-expand ul {
+  width: 1226px;
+  height: 229px;
+  margin: auto;
+}
+
+.item-expand img {
+  display: block;
+  width: 160px;
+} */
+
+.head-item-show:hover ~ .item-expand,
+.item-expand:hover {
+  height: 229px;
+  border-top: 1px solid rgb(224, 224, 224);
 }
 
 /* ======head-search====== */
@@ -72,9 +135,9 @@
 }
 
 .head-search-wrapper .fa-search {
-  width: 38px;
+  width: 50px;
   margin-left: -4px;
-  margin-bottom: -6px;
+  /* margin-bottom: -6px; */
   border-left: none;
   font-size: 18px;
   color: #616161;
