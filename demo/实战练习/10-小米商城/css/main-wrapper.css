@@ -21,11 +21,11 @@
   height: 420px;
 }
 
-.nav-wrapper ul li:hover {
+.nav-wrapper .nav-item:hover {
   background-color: #ff6700;
 }
 
-.nav-wrapper ul li a {
+.nav-wrapper .nav-item a {
   display: block;
   height: 42px;
   line-height: 42px;
@@ -48,6 +48,7 @@
 
 /* ======左侧展开导航栏====== */
 .nav-expand-wrapper {
+  display: none;
   width: 992px;
   height: 458px;
   border: 1px solid #e0e0e0;
@@ -83,6 +84,11 @@
   margin: 16px 15px 0 22px;
   width: 40px;
   height: 40px;
+}
+
+.nav-wrapper .nav-item:hover ~ .nav-expand-wrapper,
+.nav-expand-wrapper:hover {
+  display: block;
 }
 
 /* ======右侧轮播图====== */
