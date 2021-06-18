@@ -83,7 +83,7 @@ BFC（Block Formatting Context）块级格式化环境
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `<html>`                                                     | 文档根元素                                                   |
 | <mark>`float: left`</mark><br/><mark>`float: right`</mark>   | 浮动元素（`float`不为`none`）                                |
-| <mark>`position: absolut`</mark><br/><mark>`position: fixed`</mark> | 绝对定位元素                                                 |
+| <mark>`position: absolute`</mark><br/><mark>`position: fixed`</mark> | 绝对定位元素                                                 |
 | <mark>`display: inline-block`</mark>                         | 行内块元素                                                   |
 | `display: table-cell`                                        | 表格单元，默认值                                             |
 | `display: table-caption`                                     | 表格标题，默认值                                             |

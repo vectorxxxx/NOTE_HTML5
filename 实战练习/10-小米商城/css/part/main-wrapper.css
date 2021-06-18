@@ -48,9 +48,11 @@
 
 /* ======左侧展开导航栏====== */
 .nav-expand-wrapper {
+  /* visibility: hidden; */
   display: none;
   width: 992px;
   height: 458px;
+  background-color: #fff;
   border: 1px solid #e0e0e0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
   position: absolute;
@@ -60,18 +62,33 @@
 }
 
 .nav-expand-wrapper ul {
-  float: left;
+  /* float: left; */
   width: 248px;
   height: 458px;
   padding: 1px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-expand-wrapper ul:nth-child(2) {
+  left: 248px;
+}
+
+.nav-expand-wrapper ul:nth-child(3) {
+  left: calc(248px * 2);
+}
+
+.nav-expand-wrapper ul:nth-child(4) {
+  left: calc(248px * 3);
 }
 
 .nav-expand-wrapper a {
-  float: left;
+  /* 变成块元素，悬浮时整个都会变小手 */
+  display: block;
   width: 248px;
   height: 76px;
   line-height: 76px;
-  position: relative;
 }
 
 .nav-expand-wrapper a:hover {
@@ -86,11 +103,6 @@
   height: 40px;
 }
 
-.nav-wrapper .nav-item:hover ~ .nav-expand-wrapper,
-.nav-expand-wrapper:hover {
-  display: block;
-}
-
 /* ======右侧轮播图====== */
 .img-wrapper {
   width: 1226px;
@@ -99,4 +111,61 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.img-wrapper img {
+  width: 1226px;
+  height: 460px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 替换图片按钮 */
+.swiper-button {
+  width: 41px;
+  height: 69px;
+  line-height: 69px;
+  position: absolute;
+  top: 195.5px;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(215, 215, 215);
+  cursor: pointer;
+}
+
+.swiper-button:hover {
+  color: rgb(211, 211, 211);
+  background-color: rgb(123, 123, 123);
+}
+
+.button-prev {
+  left: 234px;
+}
+
+.button-next {
+  right: 0;
+}
+
+/* 替换图片原点 */
+.pagination-bullet {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
+
+.pagination-bullet .circle {
+  float: left;
+  width: 6px;
+  height: 6px;
+  margin-left: 8px;
+  background-color: rgb(148, 148, 148);
+  border: 2px solid rgb(181, 181, 181);
+  border-radius: 50%;
+}
+
+.pagination-bullet .circle:first-child,
+.pagination-bullet .circle:hover {
+  background: #fff;
+  border-color: rgb(150, 150, 150);
 }

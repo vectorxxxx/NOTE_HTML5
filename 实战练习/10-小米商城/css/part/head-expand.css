@@ -1,0 +1,91 @@
+/*
+  目前还没学习js，这里就用最笨的方法；
+  实际开发中，应该使用js渲染模板
+*/
+/* 悬浮效果 */
+#head-item-1:hover ~ #item-expand-1,
+#head-item-2:hover ~ #item-expand-2,
+#head-item-3:hover ~ #item-expand-3,
+#head-item-4:hover ~ #item-expand-4,
+#head-item-5:hover ~ #item-expand-5,
+#head-item-6:hover ~ #item-expand-6,
+#head-item-7:hover ~ #item-expand-7,
+#item-expand-1:hover,
+#item-expand-2:hover,
+#item-expand-3:hover,
+#item-expand-4:hover,
+#item-expand-5:hover,
+#item-expand-6:hover,
+#item-expand-7:hover {
+  height: 230px;
+  border-top: 1px solid rgb(224, 224, 224);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#head-item-1:hover ~ #item-expand-1 .item-detail,
+#head-item-2:hover ~ #item-expand-2 .item-detail,
+#head-item-3:hover ~ #item-expand-3 .item-detail,
+#head-item-4:hover ~ #item-expand-4 .item-detail,
+#head-item-5:hover ~ #item-expand-5 .item-detail,
+#head-item-6:hover ~ #item-expand-6 .item-detail,
+#head-item-7:hover ~ #item-expand-7 .item-detail,
+#item-expand-1:hover .item-detail,
+#item-expand-2:hover .item-detail,
+#item-expand-3:hover .item-detail,
+#item-expand-4:hover .item-detail,
+#item-expand-5:hover .item-detail,
+#item-expand-6:hover .item-detail,
+#item-expand-7:hover .item-detail {
+  height: 230px;
+}
+
+#head-item-1:hover ~ #item-expand-1 img,
+#head-item-2:hover ~ #item-expand-2 img,
+#head-item-3:hover ~ #item-expand-3 img,
+#head-item-4:hover ~ #item-expand-4 img,
+#head-item-5:hover ~ #item-expand-5 img,
+#head-item-6:hover ~ #item-expand-6 img,
+#head-item-7:hover ~ #item-expand-7 img,
+#item-expand-1:hover img,
+#item-expand-2:hover img,
+#item-expand-3:hover img,
+#item-expand-4:hover img,
+#item-expand-5:hover img,
+#item-expand-6:hover img,
+#item-expand-7:hover img {
+  height: 110px;
+}
+
+#head-item-1:hover ~ #item-expand-1 div,
+#head-item-2:hover ~ #item-expand-2 div,
+#head-item-3:hover ~ #item-expand-3 div,
+#head-item-4:hover ~ #item-expand-4 div,
+#head-item-5:hover ~ #item-expand-5 div,
+#head-item-6:hover ~ #item-expand-6 div,
+#head-item-7:hover ~ #item-expand-7 div,
+#item-expand-1:hover div,
+#item-expand-2:hover div,
+#item-expand-3:hover div,
+#item-expand-4:hover div,
+#item-expand-5:hover div,
+#item-expand-6:hover div,
+#item-expand-7:hover div {
+  display: block;
+}
+
+#head-item-1:hover ~ #item-expand-1 .sep,
+#head-item-2:hover ~ #item-expand-2 .sep,
+#head-item-3:hover ~ #item-expand-3 .sep,
+#head-item-4:hover ~ #item-expand-4 .sep,
+#head-item-5:hover ~ #item-expand-5 .sep,
+#head-item-6:hover ~ #item-expand-6 .sep,
+#head-item-7:hover ~ #item-expand-7 .sep,
+#item-expand-1:hover .sep,
+#item-expand-2:hover .sep,
+#item-expand-3:hover .sep,
+#item-expand-4:hover .sep,
+#item-expand-5:hover .sep,
+#item-expand-6:hover .sep,
+#item-expand-7:hover .sep {
+  height: 100px;
+}

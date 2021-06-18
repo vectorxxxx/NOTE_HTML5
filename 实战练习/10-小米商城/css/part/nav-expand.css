@@ -1,0 +1,40 @@
+/*
+  目前还没学习js，这里就用最笨的方法；
+  实际开发中，应该使用js渲染模板
+*/
+#nav-expand-3,
+#nav-expand-5,
+#nav-expand-6,
+#nav-expand-8,
+#nav-expand-9,
+#nav-expand-10 {
+  width: 744px;
+}
+
+#nav-expand-7 {
+  width: 496px;
+}
+
+#nav-item-1:hover ~ #nav-expand-1,
+#nav-item-2:hover ~ #nav-expand-2,
+#nav-item-3:hover ~ #nav-expand-3,
+#nav-item-4:hover ~ #nav-expand-4,
+#nav-item-5:hover ~ #nav-expand-5,
+#nav-item-6:hover ~ #nav-expand-6,
+#nav-item-7:hover ~ #nav-expand-7,
+#nav-item-8:hover ~ #nav-expand-8,
+#nav-item-9:hover ~ #nav-expand-9,
+#nav-item-10:hover ~ #nav-expand-10,
+#nav-expand-1:hover,
+#nav-expand-2:hover,
+#nav-expand-3:hover,
+#nav-expand-4:hover,
+#nav-expand-5:hover,
+#nav-expand-6:hover,
+#nav-expand-7:hover,
+#nav-expand-8:hover,
+#nav-expand-9:hover,
+#nav-expand-10:hover {
+  display: block;
+  /* visibility: visible; */
+}

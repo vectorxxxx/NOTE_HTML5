@@ -141,12 +141,13 @@
   box-shadow: 0 1px 5px #aaa;
   color: #424242;
   transition: all 0.2s;
+  z-index: 10;
 }
 
 .shop-wrapper:hover > .shop::after {
   display: block;
   content: "购物车中还没有商品，赶紧选购吧！";
-  height: 80px;
-  line-height: 80px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
 }
