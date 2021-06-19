@@ -104,7 +104,7 @@
 }
 
 /* ======右侧轮播图====== */
-.img-wrapper {
+.banner-wrapper {
   width: 1226px;
   height: 460px;
   position: absolute;
@@ -113,7 +113,7 @@
   z-index: 1;
 }
 
-.img-wrapper img {
+.banner-wrapper img {
   width: 1226px;
   height: 460px;
   position: absolute;
@@ -126,32 +126,41 @@
   width: 41px;
   height: 69px;
   line-height: 69px;
+  background-image: url("/img/右侧轮播图/icon-slides.png");
   position: absolute;
-  top: 195.5px;
-  text-align: center;
-  font-size: 50px;
-  color: rgb(215, 215, 215);
+  /* top: 195.5px; */
+  /* 不用计算的方式 */
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
   cursor: pointer;
-}
-
-.swiper-button:hover {
-  color: rgb(211, 211, 211);
-  background-color: rgb(123, 123, 123);
+  z-index: 10;
 }
 
 .button-prev {
+  background-position: calc(-41px * 2 - 1px * 1) 0;
   left: 234px;
 }
 
+.button-prev:hover {
+  background-position: calc(-41px * 0 - 1px * 0) 0;
+}
+
 .button-next {
+  background-position: calc(-41px * 3 - 1px * 2) 0;
   right: 0;
+}
+
+.button-next:hover {
+  background-position: calc(-41px * 1 - 1px * 1) 0;
 }
 
 /* 替换图片原点 */
 .pagination-bullet {
   position: absolute;
-  right: 30px;
-  bottom: 20px;
+  right: 34px;
+  bottom: 26px;
+  z-index: 10;
 }
 
 .pagination-bullet .circle {
@@ -164,8 +173,12 @@
   border-radius: 50%;
 }
 
-.pagination-bullet .circle:first-child,
-.pagination-bullet .circle:hover {
+.pagination-bullet .circle:hover,
+.pagination-bullet .active {
   background: #fff;
   border-color: rgb(150, 150, 150);
+}
+
+img:nth-of-type(0) {
+  z-index: 2;
 }

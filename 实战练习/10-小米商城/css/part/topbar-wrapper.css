@@ -77,10 +77,12 @@
   left: -40px;
   width: 124px;
   height: 0px;
+  background-color: #fff;
   box-shadow: 0 1px 5px #aaa;
   color: #333;
   font-size: 14px;
   transition: height 0.2s;
+  z-index: 1000;
 }
 
 .download-app:hover .appcode {

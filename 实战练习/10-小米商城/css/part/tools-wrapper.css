@@ -1,0 +1,165 @@
+.tools-wrapper {
+  width: 27px;
+  height: 205px;
+  margin-left: 613px;
+  /* 开启固定定位 */
+  position: fixed;
+  left: 50%;
+  top: 411.727px;
+  z-index: 100;
+}
+
+.tools-item-a {
+  display: block;
+  width: 25px;
+  height: 40px;
+  border: 1px solid #f5f5f5;
+  border-bottom: none;
+}
+
+.tools-item-a:last-child {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.tools-item {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  margin: 10px auto;
+}
+
+/* 背景图片及悬浮背景图片 */
+#phone-app {
+  background-image: url("/img/右侧工具栏/手机APP.png");
+}
+
+#phone-app-a:hover #phone-app {
+  background-image: url("/img/右侧工具栏/手机APPhover.png");
+}
+
+#person-center {
+  background-image: url("/img/右侧工具栏/个人中心.png");
+}
+
+#person-center-a:hover #person-center {
+  background-image: url("/img/右侧工具栏/个人中心hover.png");
+}
+
+#after-sales-service {
+  background-image: url("/img/右侧工具栏/售后服务.png");
+}
+
+#after-sales-service-a:hover #after-sales-service {
+  background-image: url("/img/右侧工具栏/售后服务hover.png");
+}
+
+#manual-customer-service {
+  background-image: url("/img/右侧工具栏/人工客服.png");
+}
+
+#manual-customer-service-a:hover #manual-customer-service {
+  background-image: url("/img/右侧工具栏/人工客服hover.png");
+}
+
+#shopping-cart {
+  background-image: url("/img/右侧工具栏/购物车.png");
+}
+
+#shopping-cart-a:hover #shopping-cart {
+  background-image: url("/img/右侧工具栏/购物车hover.png");
+}
+
+/* ============扩展块============ */
+
+.tools-item-extend {
+  display: none;
+  height: 28px;
+  line-height: 28px;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  padding: 0 8px;
+  position: absolute;
+  top: 0;
+  left: -85px;
+  color: #757575;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tools-item-a:hover .tools-item-extend,
+.tools-item-extend:hover {
+  display: block;
+}
+
+.tools-item-a:hover .tools-item::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid;
+  border-color: transparent transparent transparent white;
+  border-right: none;
+  position: absolute;
+  top: 16px;
+  left: -12px;
+  z-index: 10;
+}
+
+/* ======手机APP====== */
+
+#phone-app-extend {
+  height: 160px;
+  padding: 22px 15px;
+  left: -143px;
+}
+
+#phone-app-extend img {
+  /* 图片的基线对齐要处理 */
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 22px;
+}
+
+#phone-app-extend .download-text {
+  display: block;
+  width: 90px;
+  height: 45px;
+  margin: 0 auto;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+/* ======个人中心====== */
+#person-center-extend {
+  top: calc(45px + 41px * 0);
+}
+#person-center-a:hover #person-center::after {
+  top: calc(50px + 41px * 0);
+}
+
+/* ======售后服务====== */
+#after-sales-service-extend {
+  top: calc(45px + 41px * 1);
+}
+#after-sales-service-a:hover #after-sales-service::after {
+  top: calc(50px + 41px * 1);
+}
+
+/* ======人工客服====== */
+#manual-customer-service-extend {
+  top: calc(45px + 41px * 2);
+}
+#manual-customer-service-a:hover #manual-customer-service::after {
+  top: calc(50px + 41px * 2);
+}
+
+/* ======购物车====== */
+#shopping-cart-extend {
+  top: calc(45px + 41px * 3);
+  left: calc(-85px - 22px);
+}
+#shopping-cart-a:hover #shopping-cart::after {
+  top: calc(50px + 41px * 3);
+}
