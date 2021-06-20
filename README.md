@@ -2,7 +2,7 @@
 
 ## 介绍
 
-:sparkles:尚硅谷Web前端HTML5 CSS3初学者零基础入门全套完整版学习笔记
+:sparkles:尚硅谷Web前端*HTML5 CSS3*初学者零基础入门全套完整版学习笔记
 
 
 
@@ -13,7 +13,7 @@
 - Gitee:link:：[NOTE_HTML5: 尚硅谷Web前端HTML5 CSS3初学者零基础入门全套完整版学习笔记 (gitee.com)](https://gitee.com/vectorx/note_html5)
 - CC:link:：[VectorUx / NOTE_HTML5 · CODE CHINA (csdn.net)](https://codechina.csdn.net/qq_35925558/note_html5)
 
-:sparkles:看文档推荐使用语雀，感觉更加简洁；需要图片资源的推荐下面几个代码托管平台，都是同步更新的哦！
+:sparkles:看文档推荐使用**语雀**，感觉更加简洁；需要图片资源的推荐下面几个代码托管平台，都是同步更新的哦！
 
 :sparkles:同时，为了更方便大家在托管平台上直接看，特意整理了一下结构（因为默认只有README文件会有目录结构，所以每节单独放到了一个文件夹下面）
 
@@ -23,7 +23,7 @@
 - CSDN:link:：[Web前端_VectorX's Blog-CSDN博客](https://blog.csdn.net/qq_35925558/category_11061834.html)
 - 掘金:link:：[VectorX 的个人主页 - 文章 (juejin.cn)](https://juejin.cn/user/1794840859509070/posts)
 
-:sparkles:另外，新搭建了一个Github Pages网站，大家可以去尝尝鲜~
+:sparkles:另外，新搭建了一个*Github Pages*网站，大家可以去尝尝鲜~
 
 - 我的博客:link:：[标签 | VectorX (vectorxxxx.github.io)](https://vectorxxxx.github.io/tags/#15-html5css3)
 
@@ -41,13 +41,13 @@
 
 
 
-:sparkles:目前，因为本人是边学边更的，目前还没有学习完毕，所以暂时只整理了这些
+:sparkles:目前，因为本人是*边学边更*的，目前还没有学习完毕，所以暂时只整理了这些
 
 
 
 ## 软件
 
-:sparkles:视频中使用到的软件和资源，还有一些其他的开发工具，仅供参考
+:sparkles:视频中使用到的软件和资源，还有一些其他的开发工具，仅供参考（eg. 考虑到部分下载速度的问题，特意整理了部分软件到Software仓库下，大家可以自取）
 
 ### Zeal
 
@@ -70,6 +70,7 @@
   - Ayu
   - vscode-icons
   - Live Server
+  - JS & CSS Minifier (Minify)
 
 ### Atom
 
@@ -112,8 +113,6 @@
 
 ## 实战
 
-demo\实战练习\
-
 - :white_check_mark: 京东图片列表
 - :white_check_mark: 京东左侧导航条
 - :white_check_mark: 网易新闻列表
@@ -123,6 +122,7 @@ demo\实战练习\
 - :white_check_mark: 京东顶部导航条
 - :white_check_mark: 背景按钮
 - :white_check_mark: 电影卡片
+- :white_check_mark: 小米商城
 
 
 
@@ -180,9 +180,22 @@ demo\font\
 
 :sparkles:psd文件因为没法上传图床，所以大家还是在`demo\assets\电影卡片\1.psd`直接下载吧~
 
+### 小米商城
+
+:sparkles:因为图片较多，特意写了一个Python脚本爬取了小米商城的部分结构的图片集合
+
+- 头部导航栏img
+- 左侧展开导航栏icon
+
+:sparkles:如果想要最新的图片，可以安装下Python环境后执行脚本即可；其他图片可以自取
+
+
+
 整理难免有疏忽和遗漏的地方，欢迎大家指正批评！
 
 
+
+---
 
 > 署名 4.0 国际 (CC BY 4.0)。您可以自由地：共享 — 在任何媒介以任何形式复制、发行本作品；演绎 — 修改、转换或以本作品为基础进行创作；在任何用途下，甚至商业目的。只要你遵守许可协议条款，许可人就无法收回你的这些权利。惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
 
