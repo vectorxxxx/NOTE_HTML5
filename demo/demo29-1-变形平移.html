@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="变形平移">
+    <title>变形平移</title>
+    <style>
+        body {
+            width: 1000px;
+            height: 700px;
+            /* table-cell的方式具有一定局限性 */
+            /* display: table-cell;
+            vertical-align: middle;
+            text-align: center; */
+        }
+
+        .box {
+            /* width: 100px;
+            height: 100px; */
+            background-color: #bfa;
+            /* 这种居中方式，只适用于元素的大小确定 */
+            /* position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto; */
+
+            /* transform变形平移的方式 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, architecto! Aliquam blanditiis vel
+        maiores, id ab tempore quod hic facere nesciunt culpa voluptatibus consectetur consequuntur. Assumenda id rerum
+        laborum nam!</div>
+</body>
+
+</html>
