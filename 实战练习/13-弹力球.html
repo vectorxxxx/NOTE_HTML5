@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="弹力球">
+    <title>弹力球</title>
+    <style>
+        .outer {
+            width: 100%;
+            height: 700px;
+            border-bottom: 10px solid #000;
+            /* 外边距重叠，开启BFC */
+            overflow: hidden;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: gray;
+            animation: bounce 6s ease-in forwards;
+        }
+
+        @keyframes bounce {
+            from {
+                margin-top: 0;
+            }
+
+            5%,
+            15%,
+            25%,
+            35%,
+            45%,
+            55%,
+            65%,
+            75%,
+            85%,
+            95%,
+            98%,
+            to {
+                margin-top: 600px;
+                animation-timing-function: ease-out;
+            }
+
+            10%,
+            20%,
+            30%,
+            40%,
+            50%,
+            60%,
+            70%,
+            80%,
+            90% {
+                animation-timing-function: ease-in;
+            }
+
+            10% {
+                margin-top: 60px;
+            }
+
+            20% {
+                margin-top: 120px;
+            }
+
+            30% {
+                margin-top: 180px;
+            }
+
+            40% {
+                margin-top: 240px;
+            }
+
+            50% {
+                margin-top: 300px;
+            }
+
+            60% {
+                margin-top: 360px;
+            }
+
+            70% {
+                margin-top: 420px;
+            }
+
+            80% {
+                margin-top: 480px;
+            }
+
+            90% {
+                margin-top: 540px;
+            }
+
+            96% {
+                margin-top: 580px;
+            }
+
+            99% {
+                margin-top: 590px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

@@ -84,6 +84,18 @@
 
 - 官方地址：[Download WebStorm: The Smartest JavaScript IDE by JetBrains](https://www.jetbrains.com/webstorm/download/#section=windows)
 
+### FastStone Capture
+
+- 下载地址：[FastStone Capture - Download](https://faststone-capture.en.softonic.com/)
+
+### Photoshop精简版
+
+- 下载地址：[Adobe_Photoshop_CS6_Lite.7z - 蓝奏云 (lanzoui.com)](https://cheat8.lanzoui.com/iD3rBp7d02h)
+
+
+
+## 网址
+
 ### 字符实体
 
 - [HTML 字符实体](https://www.w3school.com.cn/html/html_entities.asp)
@@ -93,10 +105,6 @@
 
 - 官方地址：[CSS Diner - Where we feast on CSS Selectors!](https://flukeout.github.io/)
 
-### FastStone Capture
-
-- 下载地址：[FastStone Capture - Download](https://faststone-capture.en.softonic.com/)
-
 ### reset样式
 
 - 官方地址：[reset.css](https://meyerweb.com/eric/tools/css/reset/)
@@ -105,9 +113,9 @@
 
 - 官方地址：[normalize.css](https://necolas.github.io/normalize.css/8.0.1/normalize.css)
 
-### Photoshop精简版
+### 贝叶斯曲线
 
-- [Adobe_Photoshop_CS6_Lite.7z - 蓝奏云 (lanzoui.com)](https://cheat8.lanzoui.com/iD3rBp7d02h)
+- 在线地址：[https://cubic-bezier.com](https://cubic-bezier.com)
 
 
 
@@ -123,6 +131,10 @@
 - :white_check_mark: 背景按钮
 - :white_check_mark: 电影卡片
 - :white_check_mark: 小米商城
+- :white_check_mark: 米兔
+- :white_check_mark: 奔跑的少年
+- :white_check_mark: 弹力球
+- :white_check_mark: 酷炫球
 
 
 
@@ -189,7 +201,13 @@ demo\font\
 
 :sparkles:如果想要最新的图片，可以安装下Python环境后执行脚本即可；其他图片可以自取
 
+### 米兔
 
+- :link: [https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623204918.png](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623204918.png)
+
+### 奔跑的少年
+
+- :link : [https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623205014.png](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623205014.png)
 
 整理难免有疏忽和遗漏的地方，欢迎大家指正批评！
 

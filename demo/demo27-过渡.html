@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="过渡">
+    <title>过渡</title>
+    <style>
+        .box1 {
+            height: 500px;
+            width: 1000px;
+            background-color: #bfa;
+        }
+
+        .box2,
+        .box3 {
+            height: 100px;
+            width: 100px;
+        }
+
+        .box2 {
+            background-color: red;
+            transition: margin-left 2s 1s;
+            transition-property: margin-left;
+            transition-duration: 2s;
+            transition-delay: 1s;
+            /* transition-timing-function: linear; */
+            /* transition-timing-function: ease; */
+            /* transition-timing-function: ease-in; */
+            /* transition-timing-function: ease-out; */
+            /* transition-timing-function: ease-in-out; */
+            /* transition-timing-function: cubic-bezier(.17, 1.79, .68, -0.69); */
+            /* transition-timing-function: steps(2, end); */
+        }
+
+        .box3 {
+            background-color: yellow;
+            margin-top: 100px;
+            transition: margin-left 2s;
+        }
+
+        .box1:hover div {
+            margin-left: 900px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>
