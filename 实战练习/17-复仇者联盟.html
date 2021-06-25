@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="复仇者联盟">
+    <title>复仇者联盟</title>
+    <style>
+        html {
+            perspective: 800px;
+        }
+
+        .cube {
+            height: 200px;
+            width: 200px;
+            margin: 200px auto;
+            position: relative;
+            /* 设置3d变形效果 */
+            transform-style: preserve-3d;
+            animation: cube-rotate 12s infinite linear;
+        }
+
+
+        .cube div {
+            height: 200px;
+            width: 200px;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 为元素设置透明效果 */
+            opacity: .85;
+        }
+
+        .surface1 {
+            background-image: url("/assets/复仇者联盟/1.jpg");
+            transform: translateX(-100px) rotateY(90deg);
+        }
+
+        .surface2 {
+            background-image: url("/assets/复仇者联盟/2.jpg");
+            transform: translateX(100px) rotateY(90deg);
+        }
+
+        .surface3 {
+            background-image: url("/assets/复仇者联盟/3.jpg");
+            transform: translateY(-100px) rotateX(90deg);
+        }
+
+        .surface4 {
+            background-image: url("/assets/复仇者联盟/4.jpg");
+            transform: translateY(100px) rotateX(90deg);
+        }
+
+        .surface5 {
+            background-image: url("/assets/复仇者联盟/5.jpg");
+            transform: translateZ(-100px);
+        }
+
+        .surface6 {
+            background-image: url("/assets/复仇者联盟/6.jpg");
+            transform: translateZ(100px);
+        }
+
+        @keyframes cube-rotate {
+            from {
+                transform: rotateX(0) rotateY(0) rotateZ(0);
+            }
+
+            to {
+                transform: rotateX(1turn) rotateY(2turn) rotateZ(3turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <div class="surface1"></div>
+        <div class="surface2"></div>
+        <div class="surface3"></div>
+        <div class="surface4"></div>
+        <div class="surface5"></div>
+        <div class="surface6"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="鸭子表">
+    <title>鸭子表</title>
+    <style>
+        .clock {
+            width: 500px;
+            height: 500px;
+            background-image: url("assets/鸭子表/clock.png");
+            background-image: url("assets/鸭子表/clock_duck.jpg");
+            background-size: cover;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .clock>div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+        }
+
+        .clock>div>div {
+            height: 50%;
+            margin: 0 auto;
+        }
+
+        /* 时针 */
+        .hour-wrapper {
+            height: 60%;
+            width: 60%;
+            animation: clock-run 43200s infinite;
+        }
+
+        .hour {
+            width: 8px;
+            background-color: black;
+        }
+
+        /* 分针 */
+        .minute-wrapper {
+            height: 75%;
+            width: 75%;
+            animation: clock-run 3600s steps(60) infinite;
+        }
+
+        .minute {
+            width: 4px;
+            background-color: black;
+        }
+
+        /* 秒针 */
+        .second-wrapper {
+            height: 90%;
+            width: 90%;
+            animation: clock-run 60s steps(60) infinite;
+        }
+
+        .second {
+            width: 2px;
+            background-color: red;
+        }
+
+        @keyframes clock-run {
+            from {
+                transform: rotateZ(0);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hour-wrapper">
+            <div class="hour"></div>
+        </div>
+        <div class="minute-wrapper">
+            <div class="minute"></div>
+        </div>
+        <div class="second-wrapper">
+            <div class="second"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

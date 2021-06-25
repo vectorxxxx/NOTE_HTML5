@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="缩放">
+    <title>缩放</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: #bfa;
+            margin: 200px auto;
+            transition: 2s;
+        }
+
+        .box:hover {
+            /* transform: scaleX(2); */
+            /* transform: scaleY(2); */
+            transform: scale(2);
+            /* 变形的原点 */
+            transform-origin: 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
