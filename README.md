@@ -133,8 +133,11 @@
 - :white_check_mark: 小米商城
 - :white_check_mark: 米兔
 - :white_check_mark: 奔跑的少年
+- :white_check_mark: 奔跑的川普
 - :white_check_mark: 弹力球
 - :white_check_mark: 酷炫球
+- :white_check_mark: 鸭子表
+- :white_check_mark: 复仇者联盟
 
 
 
@@ -207,7 +210,27 @@ demo\font\
 
 ### 奔跑的少年
 
-- :link : [https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623205014.png](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623205014.png)
+- :link: [https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623205014.png](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623205014.png)
+
+### 奔跑的川普
+
+- :link: [https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190723.png](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190723.png)
+
+### 鸭子表
+
+- :link: [https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190532.jpg](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190532.jpg)
+- :link: [https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190558.png](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190558.png)
+
+### 复仇者联盟
+
+- :link: https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190817.jpg
+- :link: ​[https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190822.jpg](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190822.jpg)
+- :link: ​[https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190826.jpg](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190826.jpg)
+- :link: ​[https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190838.jpg](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190838.jpg)
+- :link: ​[https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190851.jpg](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190851.jpg)
+- :link: ​[https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190855.jpg](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626190855.jpg)
+
+
 
 整理难免有疏忽和遗漏的地方，欢迎大家指正批评！
 

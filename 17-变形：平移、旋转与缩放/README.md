@@ -2,7 +2,7 @@
 
 [TOC]
 
-# 变形：平移与旋转
+# 变形：平移、旋转与缩放
 
 变形就是指通过css来改变元素的形状或位置
 
@@ -332,4 +332,4 @@ html {
 }
 ```
 
-![复仇者联盟](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210625222823.gif)
+![复仇者联盟](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626185057.gif) 
