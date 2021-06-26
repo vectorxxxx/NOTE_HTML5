@@ -1,0 +1,29 @@
+/*
+`css`中的注释，内容会被解析到`css`文件中
+*/
+body {
+  --height: calc(200px / 2);
+  --width: 100px;
+}
+body div {
+  height: var(--height);
+  width: var(--width);
+}
+body .box1 {
+  background-color: #bfa;
+}
+body .box1 .box2 {
+  background-color: red;
+}
+body .box1 .box2 .box3 {
+  background-color: yellow;
+}
+body .box1 .box2 > .box4 {
+  background-color: green;
+}
+body .box1 :hover {
+  background-color: blue;
+}
+body .box1-wrapper {
+  background-color: peru;
+}

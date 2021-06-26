@@ -1,0 +1,54 @@
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  background-image: url("image / a / b / c/1.png");
+}
+.box2 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  background-image: url("image / a / b / c/2.png");
+}
+.p1,
+.p2 {
+  width: 200px;
+  height: 200px;
+}
+.p1-wrapper {
+  background-color: peru;
+}
+.p1 :hover {
+  background-color: blue;
+}
+.p2 {
+  color: red;
+}
+.p3 {
+  width: 200px;
+  height: 200px;
+}
+.p3-wrapper {
+  background-color: peru;
+}
+.p3 :hover {
+  background-color: blue;
+}
+.p5 {
+  width: 200px;
+  height: 200px;
+}
+.p6 {
+  width: 300px;
+  height: 100px;
+  background-color: red;
+}
+.h1 {
+  color: #ff8000;
+}
+body {
+  background-color: #bfa;
+}
+body:hover {
+  background-color: #22aa00;
+}

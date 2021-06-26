@@ -1,0 +1,85 @@
+
+@b1:box1;
+@b2:box2;
+@b3:box3;
+@size:200px;
+@bc:background-color;
+@bi:background-image;
+@color:red;
+@path:image/a/b/c;
+
+.@{b1}{
+  width: @size;
+  height: $width;
+  @{bc}: @color;
+  @{bi}: url("@{path}/1.png");
+}
+
+.@{b2}{
+  width: @size;
+  height: $width;
+  @{bc}: @color;
+  @{bi}: url("@{path}/2.png");
+}
+
+.p1{
+  width: @size;
+  height: $width;
+  &-wrapper{
+    background-color: peru;
+  }
+  // &:hover{
+  //   background-color: blue;
+  // }
+  :hover{
+    background-color: blue;
+  }
+}
+
+// :extend() 对当前选择器扩展指定选择器的样式（选择器分组）
+.p2:extend(.p1){
+  color:@color;
+}
+
+.p3{
+  // 直接对指定的样式进行引用，这里就相当于将p1的样式在这里进行了复制
+  // mixin 混合
+  .p1();
+}
+
+// 使用类选择器时可以在选择器后边添加一个括号，这时我们实际上就创建了一个mixins
+.p4(){
+  width: @size;
+  height: $width;
+}
+
+.p5{
+  // .p4();
+  .p4;
+}
+
+// 在混合函数中可以直接设置变量
+.test(@w:200px, @h:100px, @bc:red){
+  width: @w;
+  height: @h;
+  background-color: @bc;
+}
+
+.p6{
+  // .test(200px, 100px, red); // 对应参数位传值
+  // .test(@h:200px,@w:100px,@bc:red); // 写明对应属性，可变换顺序
+  // .test();
+  .test(300px);
+}
+
+.h1{
+  color:average(red,yellow);
+}
+
+body{
+  background-color: #bfa;
+}
+
+body:hover{
+  background-color: darken(#bfa, 50%);
+}
