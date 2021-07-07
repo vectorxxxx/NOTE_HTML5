@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="flex">
+    <title>flex</title>
+    <style>
+        body {
+            /* 去除默认样式 */
+            margin: 0;
+            padding: 0;
+            /* width: 200px; */
+            /* height: 100px; */
+            border: 10px solid black;
+            /* 设置弹性容器 */
+            display: flex;
+            /* 设置弹性元素排列方式 */
+            /* flex-direction: row; */
+            /* 设置自动换行 */
+            /* flex-wrap: wrap; */
+            /* 简写属性 */
+            flex-flow: row wrap;
+
+            /* 元素沿着主轴起边排列 */
+            justify-content: flex-start;
+            /* 元素沿着主轴终边排列 */
+            justify-content: flex-end;
+            /* 元素居中排列 */
+            justify-content: center;
+            /* 空白分布到元素两侧 */
+            justify-content: space-around;
+            /* 空白均匀分布到元素间 */
+            justify-content: space-between;
+            /* 空白分布到元素的单侧 */
+            justify-content: space-evenly;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #bfa;
+            text-align: center;
+            font-size: 32px;
+            /* 指定弹性元素的伸展系数 */
+            /* flex-grow: 1; */
+            /* 指定弹性元素的收缩系数 */
+            /* flex-shrink: 1; */
+        }
+
+        div:nth-child(1) {
+            background-color: red;
+        }
+
+        div:nth-child(2) {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+
+</html>

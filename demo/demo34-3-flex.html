@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="flex">
+    <title>flex</title>
+    <style>
+        ul {
+            /* 去除默认样式 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 10px solid black;
+            /* 设置弹性容器 */
+            display: flex;
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        li:nth-child(1) {
+            background-color: #bfa;
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 200px; */
+            order: 2;
+        }
+
+        li:nth-child(2) {
+            background-color: red;
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            order: 3;
+        }
+
+        li:nth-child(3) {
+            background-color: green;
+            /* flex-grow: 3; */
+            /* flex-shrink: 3; */
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>

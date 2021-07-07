@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// 视口宽度
+@total-width: 750;
+
+// 自定义类选择器
+.w {
+  width: 693 / 40rem;
+  margin: 0 auto;
+}
+
+html {
+  // 设置rem值
+  font-size: 100vw / @total-width * 40;
+  background-color: #eff0f4;
+}
+
+// 统一设置a标签样式
+a {
+  text-decoration: none;
+}
+
+// =============头部=============
+.top-bar-wrapper:extend(.w) {
+  // 使用弹性容器
+  display: flex;
+  // 空白空间均匀分布到元素中间
+  justify-content: space-between;
+  // 设置辅轴居中对齐
+  align-items: center;
+  // 设置整体宽高
+  height: 175/40rem;
+  // 设置字体大小颜色
+  color: #24253d;
+  font-size: 5rem;
+
+  // 设置a元素样式
+  a {
+    color: #999;
+    font-size: 5 / 40rem;
+  }
+}
+
+// =============轮播图=============
+.banner-wrapper:extend(.w) {
+  // 设置图片大小
+  img {
+    width: 100%;
+  }
+}
+
+// =============主题=============
+.topic-wrapper:extend(.w) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 329 / 40rem;
+  a {
+    width: 327 / 40rem;
+    height: 104 / 40rem;
+    border-radius: 10/40rem;
+    // 设置字体大小颜色
+    color: #fff;
+    font-size: 4rem;
+  }
+
+  .course {
+    background-color: rgb(249, 112, 83);
+  }
+  .teacher {
+    background-color: rgb(198, 87, 255);
+  }
+  .subscription {
+    background-color: rgb(255, 57, 113);
+  }
+  .download {
+    background-color: rgb(29, 146, 255);
+  }
+}

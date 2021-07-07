@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VectorX">
+    <meta name="keywords" content="flex">
+    <title>flex</title>
+    <style>
+        ul {
+            /* 去除默认样式 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 300px;
+            height: 300px;
+            border: 10px solid black;
+            /* 设置弹性容器 */
+            display: flex;
+            flex-flow: row wrap;
+
+            /* 元素在辅轴上如何对齐 */
+            /* 默认值，将元素的长度设置为相同的值 */
+            /* align-items: stretch; */
+            /* 元素不会拉伸，沿着辅轴起边对齐 */
+            align-items: flex-start;
+            /* 沿着辅轴的终边对齐 */
+            /* align-items: flex-end; */
+            /* 居中对齐 */
+            /* align-items: center; */
+            /* 基线对齐 */
+            /* align-items: baseline; */
+
+            /* 元素沿着辅轴起边排列 */
+            /* align-content: flex-start; */
+            /* 元素沿着辅轴终边排列 */
+            /* align-content: flex-end; */
+            /* 元素沿着辅轴终边排列 */
+            /* align-content: center; */
+            /* 空白分布到元素两侧 */
+            /* align-content: space-around; */
+            /* 空白均匀分布到元素间 */
+            /* align-content: space-between; */
+            /* 空白分布到元素的单侧 */
+            /* align-content: space-evenly; */
+
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        li {
+            width: 100px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        li:nth-child(1) {
+            background-color: #bfa;
+            /* align-self: flex-end; */
+        }
+
+        li:nth-child(2) {
+            background-color: red;
+        }
+
+        li:nth-child(3) {
+            background-color: green;
+        }
+
+        li:nth-child(4) {
+            background-color: chocolate;
+        }
+
+        li:nth-child(5) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2
+            <div>2</div>
+        </li>
+        <li>3
+            <div>3</div>
+            <div>3</div>
+        </li>
+        <li>4</li>
+        <li>5
+            <div>5</div>
+        </li>
+    </ul>
+</body>
+
+</html>
