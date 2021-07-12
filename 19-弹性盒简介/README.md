@@ -1,10 +1,8 @@
-> 笔记来源：[尚硅谷Web前端HTML5&CSS3初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
+> 笔记来源：[尚硅谷 Web 前端 HTML5&CSS3 初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
 
-[TOC]
+[toc]
 
 # 弹性盒简介
-
-
 
 ## 1、基本概念
 
@@ -29,15 +27,13 @@
 display: flex;
 ```
 
-![flex](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627123212.png)
+![flex](https://img-blog.csdnimg.cn/img_convert/5c1d885e5f11e55cf83de4828487003b.png)
 
 ### 弹性元素
 
 弹性容器的子元素是弹性元素（弹性项）
 
 弹性元素可以同时是弹性容器
-
-
 
 ## 2、弹性容器的属性
 
@@ -62,7 +58,7 @@ display: flex;
 flex-direction: column;
 ```
 
-![flex-direction](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627123353.png)
+![flex-direction](https://img-blog.csdnimg.cn/img_convert/11729c6c2c818441f5089c3a3984a080.png)
 
 #### 自动换行
 
@@ -78,7 +74,7 @@ flex-direction: row;
 flex-wrap: wrap;
 ```
 
-![flex-wrap](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627123448.png)
+![flex-wrap](https://img-blog.csdnimg.cn/img_convert/c87e43a9db82a4f564f98dbdae47fcc4.png)
 
 **简写属性**
 
@@ -89,7 +85,7 @@ flex-wrap: wrap;
 flex-flow: row wrap;
 ```
 
-![flex-flow](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627123102.png)
+![flex-flow](https://img-blog.csdnimg.cn/img_convert/963e711b9a2217a1c34b1a08538ea795.png)
 
 #### 空白空间
 
@@ -97,27 +93,27 @@ flex-flow: row wrap;
 
 - `flex-start` 元素沿着主轴起边排列
 
-  ![flex-start](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627124612.png)
+  ![flex-start](https://img-blog.csdnimg.cn/img_convert/3ee816db158fb6b5d480172f9ac578c0.png)
 
 - `flex-end` 元素沿着主轴终边排列
 
-  ![flex-end](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627124635.png)
+  ![flex-end](https://img-blog.csdnimg.cn/img_convert/bb526f4373ab471791217f20260dbbd1.png)
 
 - `center` 元素居中排列
 
-  ![center](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627124740.png)
+  ![center](https://img-blog.csdnimg.cn/img_convert/0c54d451da26478557563813cbbcc77f.png)
 
-- `space-around`  空白分布到元素两侧
+- `space-around` 空白分布到元素两侧
 
-  ![space-around](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627125043.png)
+  ![space-around](https://img-blog.csdnimg.cn/img_convert/954f8711b1e786fcc0834a064290c861.png)
 
 - `space-between` 空白均匀分布到元素间
 
-  ![space-between](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627125135.png)
+  ![space-between](https://img-blog.csdnimg.cn/img_convert/03d831ec631b993192edfd186e4c2396.png)
 
 - `space-evenly` 空白分布到元素的单侧
 
-  ![space-evenly](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627125212.png)
+  ![space-evenly](https://img-blog.csdnimg.cn/img_convert/110522935bd98f332cb9cf04380f563b.png)
 
 ### 辅轴属性
 
@@ -127,23 +123,23 @@ flex-flow: row wrap;
 
 - `stretch` 默认值，将元素的长度设置为相同的值
 
-  ![stretch](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627131307.png)
+  ![stretch](https://img-blog.csdnimg.cn/img_convert/2af92a896e40671ca536a9ed39dc1c1b.png)
 
 - `flex-start` 元素不会拉伸，沿着辅轴起边对齐
 
-  ![flex-start](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627131350.png)
+  ![flex-start](https://img-blog.csdnimg.cn/img_convert/6ab8b213829111066f5cd0ad1fa70bb7.png)
 
 - `flex-end` 沿着辅轴的终边对齐
 
-  ![flex-end](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627131440.png)
+  ![flex-end](https://img-blog.csdnimg.cn/img_convert/9c5f3fff8119986aa076cbe5f3e778d9.png)
 
 - `center` 居中对齐
 
-  ![center](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627131516.png)
+  ![center](https://img-blog.csdnimg.cn/img_convert/5448b556d848e25d86ea52c09222f8bf.png)
 
 - `baseline` 基线对齐
 
-  ![baseline](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627131651.png)
+  ![baseline](https://img-blog.csdnimg.cn/img_convert/c33af4a7dc9c4e2ea1a978edcfad4e11.png)
 
 #### 空白空间
 
@@ -151,29 +147,27 @@ flex-flow: row wrap;
 
 - `flex-start` 元素沿着辅轴起边排列
 
-  ![flex-start](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627133051.png)
+  ![flex-start](https://img-blog.csdnimg.cn/img_convert/9508792eb1a11fe0af3d51f1d47bb584.png)
 
 - `flex-end` 元素沿着辅轴终边排列
 
-  ![flex-end](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627133149.png)
+  ![flex-end](https://img-blog.csdnimg.cn/img_convert/13cf3c6ca7af292ddc5fb2279dc19839.png)
 
 - `center` 元素居中排列
 
-  ![center](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627133217.png)
+  ![center](https://img-blog.csdnimg.cn/img_convert/d788195de72ec17c817338b220c2ea32.png)
 
-- `space-around`  空白分布到元素两侧
+- `space-around` 空白分布到元素两侧
 
-  ![space-around](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627133306.png)
+  ![space-around](https://img-blog.csdnimg.cn/img_convert/3809331c72ca666656b99b1983e0d473.png)
 
 - `space-between` 空白均匀分布到元素间
 
-  ![space-between](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627133402.png)
+  ![space-between](https://img-blog.csdnimg.cn/img_convert/4a28fd1069af8b43b103e48f4db7cecf.png)
 
 - `space-evenly` 空白分布到元素的单侧
 
-  ![space-evenly](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627133527.png)
-
-
+  ![space-evenly](https://img-blog.csdnimg.cn/img_convert/f07a0ca24286bb5c3c5c3caf5a8e7559.png)
 
 ### 弹性居中
 
@@ -184,63 +178,61 @@ justify-content: center;
 align-items: center;
 ```
 
-![弹性居中](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627131852.png)
-
-
+![弹性居中](https://img-blog.csdnimg.cn/img_convert/0f326ed5006e1aac8e7f9120cb02c8b4.png)
 
 ## 3、弹性元素的属性
 
 ### 伸展系数
 
-`flex-grow` 指定弹性元素的伸展系数，默认值为0
+`flex-grow` 指定弹性元素的伸展系数，默认值为 0
 
 - 当父元素有多余空间的时，子元素如何伸展
 - 父元素的剩余空间，会按照比例进行分配
 
 ```css
 li:nth-child(1) {
-    background-color: #bfa;
-    flex-grow: 1;
+  background-color: #bfa;
+  flex-grow: 1;
 }
 
 li:nth-child(2) {
-    background-color: red;
-    flex-grow: 2;
+  background-color: red;
+  flex-grow: 2;
 }
 
 li:nth-child(3) {
-    background-color: green;
-    flex-grow: 3;
+  background-color: green;
+  flex-grow: 3;
 }
 ```
 
-![flex-grow](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627135040.png)
+![flex-grow](https://img-blog.csdnimg.cn/img_convert/fe1e85d111f123fbdc490048947a7252.png)
 
 ### 缩减系数
 
-`flex-shrink` 指定弹性元素的收缩系数，默认值为1
+`flex-shrink` 指定弹性元素的收缩系数，默认值为 1
 
 - 当父元素中的空间不足以容纳所有的子元素时，如何对子元素进行收缩
-- 缩减系数的计算方式比较复杂，缩减多少是根据 *缩减系数* 和 *元素大小* 来计算
+- 缩减系数的计算方式比较复杂，缩减多少是根据 _缩减系数_ 和 _元素大小_ 来计算
 
 ```css
 li:nth-child(1) {
-    background-color: #bfa;
-    flex-shrink: 1;
+  background-color: #bfa;
+  flex-shrink: 1;
 }
 
 li:nth-child(2) {
-    background-color: red;
-    flex-shrink: 2;
+  background-color: red;
+  flex-shrink: 2;
 }
 
 li:nth-child(3) {
-    background-color: green;
-    flex-shrink: 3;
+  background-color: green;
+  flex-shrink: 3;
 }
 ```
 
-![flex-shrink](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627135240.png)
+![flex-shrink](https://img-blog.csdnimg.cn/img_convert/19f06ff1e9a81a0838ab6f1cdfc607a0.png)
 
 ### 基础长度
 
@@ -253,12 +245,12 @@ li:nth-child(3) {
 
 ```css
 li:nth-child(1) {
-    background-color: #bfa;
-    flex-basis: 200px;
-}    
+  background-color: #bfa;
+  flex-basis: 200px;
+}
 ```
 
-![flex-basis](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627135403.png)
+![flex-basis](https://img-blog.csdnimg.cn/img_convert/4ebbe412b98a6bda2cdcf8a95e6687b1.png)
 
 **简写属性**
 
@@ -274,22 +266,22 @@ li:nth-child(1) {
 
 ```css
 li:nth-child(1) {
-    background-color: #bfa;
-    order: 2;
+  background-color: #bfa;
+  order: 2;
 }
 
 li:nth-child(2) {
-    background-color: red;
-    order: 3;
+  background-color: red;
+  order: 3;
 }
 
 li:nth-child(3) {
-    background-color: green;
-    order: 1;
+  background-color: green;
+  order: 1;
 }
 ```
 
-![order](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627140401.png)
+![order](https://img-blog.csdnimg.cn/img_convert/9946555125edbfac6ed4bad5db916027.png)
 
 ### 覆盖辅轴
 
@@ -297,9 +289,9 @@ li:nth-child(3) {
 
 ```css
 li:nth-child(1) {
-    background-color: #bfa;
-    align-self: flex-end;
-}    
+  background-color: #bfa;
+  align-self: flex-end;
+}
 ```
 
-![image-20210627134055587](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210627134056.png)
+![image-20210627134055587](https://img-blog.csdnimg.cn/img_convert/088ae6940229c340026c918928f9607e.png)

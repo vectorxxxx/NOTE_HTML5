@@ -1,18 +1,18 @@
-> 笔记来源：[尚硅谷Web前端HTML5&CSS3初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
+> 笔记来源：[尚硅谷 Web 前端 HTML5&CSS3 初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
 
-[TOC]
+[toc]
 
-# CSS语法与选择器
+# CSS 语法与选择器
 
-## 1. CSS简介
+## 1. CSS 简介
 
 ### 层叠样式表
 
-网页实际上是一个多层的结构，通过CSS可以分别为网页的每一个层来设置样式，而最终我们能看到只是网页的最上边一层
+网页实际上是一个多层的结构，通过 CSS 可以分别为网页的每一个层来设置样式，而最终我们能看到只是网页的最上边一层
 
-总之一句话，CSS用来设置网页中元素的样式
+总之一句话，CSS 用来设置网页中元素的样式
 
-使用CSS来修改元素样式的方式大致可以分为3种
+使用 CSS 来修改元素样式的方式大致可以分为 3 种
 
 ### 内联样式（行内样式）
 
@@ -26,12 +26,12 @@
 
 ### 内部样式表
 
-将样式编写到`head`中的`style`标签里然后通过css的选择器来选中元素并为其设置各种样式可以同时为多个标签设置样式，并且修改时只需要修改一处即可。内部样式表更加方便对样式进行复用
+将样式编写到`head`中的`style`标签里然后通过 css 的选择器来选中元素并为其设置各种样式可以同时为多个标签设置样式，并且修改时只需要修改一处即可。内部样式表更加方便对样式进行复用
 
 ```css
 <style>
 p{
-    color:green; 
+    color:green;
     font-size:50px;
 }
 </style>
@@ -41,21 +41,21 @@ p{
 
 ### 外部样式表
 
-可以将css样式编写到一个外部的CSS文件中，然后通过`link`标签来引入外部的CSS文件
+可以将 css 样式编写到一个外部的 CSS 文件中，然后通过`link`标签来引入外部的 CSS 文件
 
 ```html
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css" />
 ```
 
 外部样式表需要通过`link`标签进行引入，意味着只要想使用这些样式的网页都可以对其进行引用使样式，可以在不同页面之间进行<mark>复用</mark>
 
-将样式编写到外部的CSS文件中，可以使用到浏览器的<mark>缓存机制，从而加快网页的加载速度</mark>，提高用户的体验。
+将样式编写到外部的 CSS 文件中，可以使用到浏览器的<mark>缓存机制，从而加快网页的加载速度</mark>，提高用户的体验。
 
-## 2. CSS基本语法
+## 2. CSS 基本语法
 
 ### 注释
 
-#### css中的注释
+#### css 中的注释
 
 只能使用`/*`和`*/`包裹。即不管是单行注释，还是多行注释，都是以`/*`开头，以`*/`结尾
 
@@ -71,7 +71,7 @@ css中的多行注释
 
 我们对比下其他几种前端语言的注释
 
-#### html中的注释
+#### html 中的注释
 
 只能使用`<!--`和`-->`包裹。即不管是单行注释，还是多行注释，都是以`<!--`开头，以`-->`结尾
 
@@ -85,7 +85,7 @@ html中的多行注释
 -->
 ```
 
-#### JS(JavaScript)和JQuery中的注释
+#### JS(JavaScript)和 JQuery 中的注释
 
 单行注释使用`//`。多行注释使用`/*`和`*/`包裹，以`<!--`开头，以`-->`结尾
 
@@ -115,16 +115,15 @@ JS(JavaScript)和JQuery中的多行注释
 
 - 声明块由一个一个的声明组成，声明是一个名值对结构
 
-
 - 一个样式名对应一个样式值，名和值之间以`:`连接，以`;`结尾
 
 ```css
-h1{
-    color: green;
+h1 {
+  color: green;
 }
 ```
 
-## 3. CSS选择器
+## 3. CSS 选择器
 
 ### 通配选择器（Universal selector）
 
@@ -133,8 +132,8 @@ h1{
 - 例子：`*{}`
 
 ```css
-*{
-    color: red;
+* {
+  color: red;
 }
 ```
 
@@ -147,27 +146,27 @@ h1{
 - 例子：`p{}` `h1{}` `div{}`
 
 ```css
-p{
-    color: red; 
+p {
+  color: red;
 }
 
-h1{
-    color: green;
+h1 {
+  color: green;
 }
 ```
 
 ### 类选择器（Class selector）
 
-- 作用：根据元素的class属性值选中一组元素
+- 作用：根据元素的 class 属性值选中一组元素
 - 语法：`.classname`
 - 例子：`.blue{}`
 
 ```css
-.blue{
-    color: blue;
+.blue {
+  color: blue;
 }
-.size{
-    font-size: 20px;
+.size {
+  font-size: 20px;
 }
 ```
 
@@ -178,46 +177,46 @@ h1{
 - 可以同时为一个元素指定多个`class`属性
 
 ```html
-<p class="blue size"> 类选择器（Class selector）</p>
+<p class="blue size">类选择器（Class selector）</p>
 ```
 
-### ID选择器（ID selector）
+### ID 选择器（ID selector）
 
 - 作用：根据元素的`id`属性值选中一个元素
 - 语法：`#idname{}`
 - 例子：`#box{}` `#red{}`
 
 ```css
-#red{
-    color: red;
+#red {
+  color: red;
 }
 ```
 
 ### 属性选择器（Attribute selector）
 
 - 作用：根据元素的属性值选中一组元素
-- 语法1：`[属性名]` 选择含有指定属性的元素
-- 语法2：`[属性名=属性值]` 选择含有指定属性和属性值的元素
-- 语法3：`[属性名^=属性值]` 选择属性值以指定值开头的元素
-- 语法4：`[属性名$=属性值]` 选择属性值以指定值结尾的元素
-- 语法5：`[属性名*=属性值]` 选择属性值中含有某值的元素
+- 语法 1：`[属性名]` 选择含有指定属性的元素
+- 语法 2：`[属性名=属性值]` 选择含有指定属性和属性值的元素
+- 语法 3：`[属性名^=属性值]` 选择属性值以指定值开头的元素
+- 语法 4：`[属性名$=属性值]` 选择属性值以指定值结尾的元素
+- 语法 5：`[属性名*=属性值]` 选择属性值中含有某值的元素
 - 例子：`p[title]{}` `p[title=e]{}` `p[title^=e]{}` `p[title$=e]{}` `p[title*=e]{}`
 
 ```css
-p[title]{
-    color: orange;
+p[title] {
+  color: orange;
 }
-p[title=e]{
-    color: orange;
+p[title="e"] {
+  color: orange;
 }
-p[title^=e]{
-    color: orange;
+p[title^="e"] {
+  color: orange;
 }
-p[title$=e]{
-    color: orange;
+p[title$="e"] {
+  color: orange;
 }
-p[title*=e]{
-    color: orange;
+p[title*="e"] {
+  color: orange;
 }
 ```
 
@@ -230,12 +229,12 @@ p[title*=e]{
 - 注意点：交集选择器中如果有元素选择器，必须使用元素选择器开头
 
 ```css
-div.red{
-    font-size: 30px;
+div.red {
+  font-size: 30px;
 }
 
-.a.b.c{
-    color: blue;
+.a.b.c {
+  color: blue;
 }
 ```
 
@@ -246,8 +245,9 @@ div.red{
 - 例子：`#b1,.p1,h1,span,div.red{}`
 
 ```css
-h1,span{
-    color: green;
+h1,
+span {
+  color: green;
 }
 ```
 
@@ -266,8 +266,8 @@ h1,span{
 - 例子：`A > B`
 
 ```css
-div.box > p > span{
-    color: orange;
+div.box > p > span {
+  color: orange;
 }
 ```
 
@@ -278,8 +278,8 @@ div.box > p > span{
 - 例子：`A B`
 
 ```css
-div span{
-    color: skyblue;
+div span {
+  color: skyblue;
 }
 ```
 
@@ -287,16 +287,16 @@ div span{
 
 - 作用：选择下一个兄弟
 - 语法：`前一个 + 下一个` `前一个 + 下一组`
-- 例子1：`A1 + A2`（Adjacent sibling combinator）
-- 例子2：  `A1 ~ An`（General sibling combinator）
+- 例子 1：`A1 + A2`（Adjacent sibling combinator）
+- 例子 2： `A1 ~ An`（General sibling combinator）
 
 ```css
-p + span{
-    color: red;
+p + span {
+  color: red;
 }
 
-p ~ span{
-    color: red;
+p ~ span {
+  color: red;
 }
 ```
 
@@ -310,16 +310,16 @@ p ~ span{
 
 - <mark>`:first-child`</mark> 第一个子元素
 - <mark>`:last-child`</mark> 最后一个子元素
-- <mark>`:nth-child()`</mark> 选中第n个子元素
-  - n：第n个，n的范围0到正无穷
-  - 2n或even：选中偶数位的元素
-  - 2n+1或odd：选中奇数位的元素
+- <mark>`:nth-child()`</mark> 选中第 n 个子元素
+  - n：第 n 个，n 的范围 0 到正无穷
+  - 2n 或 even：选中偶数位的元素
+  - 2n+1 或 odd：选中奇数位的元素
 
 以上这些伪类都是根据所有的子元素进行排序的
 
 - <mark>`:first-of-type`</mark> 同类型中的第一个子元素
 - <mark>`:last-of-type`</mark> 同类型中的最后一个子元素
-- <mark>`:nth-of-type()`</mark> 选中同类型中的第n个子元素
+- <mark>`:nth-of-type()`</mark> 选中同类型中的第 n 个子元素
 
 这几个伪类的功能和上述的类似，不同点是他们是在同类型元素中进行排序的
 
@@ -327,32 +327,32 @@ p ~ span{
 
 ```css
 /* ul下所有li，黑色 */
-ul>li {
-    color: black;
+ul > li {
+  color: black;
 }
 
 /* ul下第偶数个li，黄色 */
-ul>li:nth-child(2n) {
-    color: yellow;
+ul > li:nth-child(2n) {
+  color: yellow;
 }
 
 /* ul下第奇数个li，绿色 */
-ul>li:nth-child(odd) {
-    color: green;
+ul > li:nth-child(odd) {
+  color: green;
 }
 
 /* ul下第一个li，红色 */
-ul>li:first-child {
-    color: red;
+ul > li:first-child {
+  color: red;
 }
 
 /* ul下最后一个li，黄色 */
-ul>li:last-child {
-    color: orange;
+ul > li:last-child {
+  color: orange;
 }
 ```
 
-![image-20210516162703966](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210517204218.png)
+![image-20210516162703966](https://img-blog.csdnimg.cn/img_convert/3373666820269df4830e7827c7b9623b.png)
 
 - <mark>`:link`</mark> 未访问的链接
 - <mark>`:visited`</mark> 已访问的链接
@@ -382,7 +382,7 @@ a:active {
 }
 ```
 
-![动画2021-5-8](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210516165045.gif)
+![动画2021-5-8](https://img-blog.csdnimg.cn/img_convert/afda6908ddd6c7e9cab45751aabbcb5c.gif)
 
 ## 7. 伪元素选择器
 
@@ -399,40 +399,39 @@ a:active {
 
 ```css
 /* 段落首字母设置大小为30px */
-p::first-letter{
-    font-size: 30px;
+p::first-letter {
+  font-size: 30px;
 }
 
 /* 段落第一行设置为黄色背景 */
-p::first-line{
-    background-color: yellow;
+p::first-line {
+  background-color: yellow;
 }
 
 /* 段落选中的部分变绿色 */
-p::selection{
-    background-color: green；
+p::selection {
+  background-color: green；;
 }
 
 /* div前加上内容 */
-div::before{
-    content: 'BEFORE';
-    color: red;
+div::before {
+  content: "BEFORE";
+  color: red;
 }
 
 /* div后加上内容 */
-div::after{
-    content: 'AFTER';
-    color: blue;
+div::after {
+  content: "AFTER";
+  color: blue;
 }
 ```
 
-![动画2021-5-7](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210516170506.gif)
+![动画2021-5-7](https://img-blog.csdnimg.cn/img_convert/d00bc5df427763fc326a624449e0eec2.gif)
 
-## 8. CSS Dinner游戏
+## 8. CSS Dinner 游戏
 
 官方地址：[CSS Diner - Where we feast on CSS Selectors!](https://flukeout.github.io/)
 
-CSS Dinner是一个帮助初学者快速熟悉css各种选择器的网页游戏
+CSS Dinner 是一个帮助初学者快速熟悉 css 各种选择器的网页游戏
 
-![](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210516170941.png)
-
+![](https://img-blog.csdnimg.cn/img_convert/3655328d85f103c4981afb3105ca3538.png)

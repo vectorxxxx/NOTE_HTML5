@@ -1,6 +1,6 @@
-> 笔记来源：[尚硅谷Web前端HTML5&CSS3初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
+> 笔记来源：[尚硅谷 Web 前端 HTML5&CSS3 初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
 
-[TOC]
+[toc]
 
 # 过渡与动画
 
@@ -22,7 +22,7 @@
 
 `transition-duration`：指定过渡效果的持续时间
 
-- 时间单位：s和ms（1s=1000ms）
+- 时间单位：s 和 ms（1s=1000ms）
 
 `transition-delay`：过渡效果的延迟，等待一段时间后在执行过渡
 
@@ -33,7 +33,7 @@
 - `ease-in` 加速运动
 - `ease-out` 减速运动
 - `ease-in-out` 先加速后减速
-- `cubic-bezier()`来指定时序函数  [https://cubic-bezier.com](https://cubic-bezier.com)
+- `cubic-bezier()`来指定时序函数 [https://cubic-bezier.com](https://cubic-bezier.com)
 - `steps()`分步执行过渡效果，可以设置第二个值：
   - `end`，在时间结束时执行过渡（默认值）
   - `start`，在时间开始时执行过渡
@@ -51,7 +51,7 @@ transition-duration: 2s;
 transition-delay: 1s;
 ```
 
-![transition](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620113808.gif)
+![transition](https://img-blog.csdnimg.cn/img_convert/7480db3e978d72b04b48e47351b2712a.gif)
 
 **几种过渡效果对比**
 
@@ -61,7 +61,7 @@ transition-delay: 1s;
 transition-timing-function: linear;
 ```
 
-![linear](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620112630.gif)
+![linear](https://img-blog.csdnimg.cn/img_convert/db1e5c02804cfa5d8cfc03e84f465cc0.gif)
 
 `ease` 默认值，慢速开始，先加速后减速
 
@@ -69,7 +69,7 @@ transition-timing-function: linear;
 transition-timing-function: ease;
 ```
 
-![ease](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620112631.gif)
+![ease](https://img-blog.csdnimg.cn/img_convert/cc12a68d322c7f04647408b28e1a355b.gif)
 
 `ease-in` 加速运动
 
@@ -77,7 +77,7 @@ transition-timing-function: ease;
 transition-timing-function: ease-in;
 ```
 
-![ease-in](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620112632.gif)
+![ease-in](https://img-blog.csdnimg.cn/img_convert/e7e99280e1108793f8e0f681587c50fd.gif)
 
 `ease-out` 减速运动
 
@@ -85,7 +85,7 @@ transition-timing-function: ease-in;
 transition-timing-function: ease-out;
 ```
 
-![ease-out](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620112633.gif)
+![ease-out](https://img-blog.csdnimg.cn/img_convert/2c408e4fbec59ccbcf324b308d893ad9.gif)
 
 `ease-in-out` 先加速后减速
 
@@ -93,15 +93,15 @@ transition-timing-function: ease-out;
 transition-timing-function: ease-in-out;
 ```
 
-![ease-in-out](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620112634.gif)
+![ease-in-out](https://img-blog.csdnimg.cn/img_convert/a34bb617b70c57b8bdcdbba930315b82.gif)
 
 `cubic-bezier()`来指定时序函数
 
 ```css
-transition-timing-function: cubic-bezier(.17, 1.79, .68, -0.69);
+transition-timing-function: cubic-bezier(0.17, 1.79, 0.68, -0.69);
 ```
 
-![cubic-bezier](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620113056.gif)
+![cubic-bezier](https://img-blog.csdnimg.cn/img_convert/95be9a5c0834580690f63674754a5a5d.gif)
 
 `steps()`分步执行过渡效果
 
@@ -110,15 +110,13 @@ transition-timing-function: cubic-bezier(.17, 1.79, .68, -0.69);
 transition-timing-function: steps(2);
 ```
 
-![steps-end](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620113542.gif)
+![steps-end](https://img-blog.csdnimg.cn/img_convert/fad621042638ade6ffc1ca8ed7291524.gif)
 
 ```css
 transition-timing-function: steps(2, start);
 ```
 
-![steps-start](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210620113457.gif)
-
-
+![steps-start](https://img-blog.csdnimg.cn/img_convert/eafa6e6574b7570eea4cbbd26bafe377.gif)
 
 ## 2、动画
 
@@ -131,13 +129,13 @@ transition-timing-function: steps(2, start);
 
 ```css
 @keyframes test {
-    from {
-        margin-left: 0;
-    }
+  from {
+    margin-left: 0;
+  }
 
-    to {
-        margin-left: 900px;
-    }
+  to {
+    margin-left: 900px;
+  }
 }
 ```
 
@@ -186,9 +184,7 @@ animation-fill-mode: both; */
 animation: test 2s 2s linear infinite alternate both;
 ```
 
-![animation](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210622220548.gif)
-
-
+![animation](https://img-blog.csdnimg.cn/img_convert/c81fb42fc5c22a36a108077fb3c388c7.gif)
 
 ## 3、实战
 
@@ -196,242 +192,240 @@ animation: test 2s 2s linear infinite alternate both;
 
 ```css
 .box {
-    height: 271px;
-    width: 132px;
-    background-image: url("/assets/米兔/bigtap-mitu-queue-big.png");
-    margin: 100px auto;
-    transition: background-position 1s steps(4);
+  height: 271px;
+  width: 132px;
+  background-image: url("/assets/米兔/bigtap-mitu-queue-big.png");
+  margin: 100px auto;
+  transition: background-position 1s steps(4);
 }
 
 .box:hover {
-    background-position: -528px 0;
+  background-position: -528px 0;
 }
 ```
 
-![米兔](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623203313.gif)
+![米兔](https://img-blog.csdnimg.cn/img_convert/cfcff3ec2765beff571c95c8af08b20d.gif)
 
 ### 奔跑的少年
 
 ```css
 .box {
-    height: 256px;
-    width: calc(1536px/6);
-    background-image: url("/assets/奔跑的少年/bg2.png");
-    margin: 100px auto;
-    animation: run 1s steps(6) infinite;
-
+  height: 256px;
+  width: calc(1536px / 6);
+  background-image: url("/assets/奔跑的少年/bg2.png");
+  margin: 100px auto;
+  animation: run 1s steps(6) infinite;
 }
 
 /* 关键帧 */
 @keyframes run {
-    from {
-        background-position: 0 0;
-    }
+  from {
+    background-position: 0 0;
+  }
 
-    to {
-        background-position: -1536px 0;
-    }
+  to {
+    background-position: -1536px 0;
+  }
 }
 ```
 
-![奔跑的少年](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623203453.gif)
+![奔跑的少年](https://img-blog.csdnimg.cn/img_convert/c78e2ab5980c340bc4ee76e3229c8292.gif)
 
 ### 弹力球
 
 ```css
 .outer {
-    width: 100%;
-    height: 700px;
-    border-bottom: 10px solid #000;
-    /* 外边距重叠，开启BFC */
-    overflow: hidden;
+  width: 100%;
+  height: 700px;
+  border-bottom: 10px solid #000;
+  /* 外边距重叠，开启BFC */
+  overflow: hidden;
 }
 
 .ball {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: gray;
-    animation: bounce 6s ease-in;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: gray;
+  animation: bounce 6s ease-in;
 }
 
 @keyframes bounce {
-    from {
-        margin-top: 0;
-    }
+  from {
+    margin-top: 0;
+  }
 
-    5%,
-    15%,
-    25%,
-    35%,
-    45%,
-    55%,
-    65%,
-    75%,
-    85%,
-    95%,
-    98%,
-    to {
-        margin-top: 600px;
-        animation-timing-function: ease-out;
-    }
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95%,
+  98%,
+  to {
+    margin-top: 600px;
+    animation-timing-function: ease-out;
+  }
 
-    10%,
-    20%,
-    30%,
-    40%,
-    50%,
-    60%,
-    70%,
-    80%,
-    90% {
-        animation-timing-function: ease-in;
-    }
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
+    animation-timing-function: ease-in;
+  }
 
-    10% {
-        margin-top: 60px;
-    }
+  10% {
+    margin-top: 60px;
+  }
 
-    20% {
-        margin-top: 120px;
-    }
+  20% {
+    margin-top: 120px;
+  }
 
-    30% {
-        margin-top: 180px;
-    }
+  30% {
+    margin-top: 180px;
+  }
 
-    40% {
-        margin-top: 240px;
-    }
+  40% {
+    margin-top: 240px;
+  }
 
-    50% {
-        margin-top: 300px;
-    }
+  50% {
+    margin-top: 300px;
+  }
 
-    60% {
-        margin-top: 360px;
-    }
+  60% {
+    margin-top: 360px;
+  }
 
-    70% {
-        margin-top: 420px;
-    }
+  70% {
+    margin-top: 420px;
+  }
 
-    80% {
-        margin-top: 480px;
-    }
+  80% {
+    margin-top: 480px;
+  }
 
-    90% {
-        margin-top: 540px;
-    }
+  90% {
+    margin-top: 540px;
+  }
 
-    96% {
-        margin-top: 580px;
-    }
+  96% {
+    margin-top: 580px;
+  }
 
-    99% {
-        margin-top: 590px;
-    }
+  99% {
+    margin-top: 590px;
+  }
 }
 ```
 
-![弹力球](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623204429.gif)
+![弹力球](https://img-blog.csdnimg.cn/img_convert/52d7d87ae591a78eba76a51b14903865.gif)
 
 ### 酷炫球
 
 ```css
 div {
-    float: left;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    animation: bounce .5s infinite ease-in alternate;
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: bounce 0.5s infinite ease-in alternate;
 }
 
 .ball1 {
-    background-color: red;
-    animation-delay: .1s;
+  background-color: red;
+  animation-delay: 0.1s;
 }
 
 .ball2 {
-    background-color: yellow;
-    animation-delay: .2s;
+  background-color: yellow;
+  animation-delay: 0.2s;
 }
 
 .ball3 {
-    background-color: green;
-    animation-delay: .3s;
+  background-color: green;
+  animation-delay: 0.3s;
 }
 
 .ball4 {
-    background-color: blue;
-    animation-delay: .4s;
+  background-color: blue;
+  animation-delay: 0.4s;
 }
 
 .ball5 {
-    background-color: pink;
-    animation-delay: .5s;
+  background-color: pink;
+  animation-delay: 0.5s;
 }
 
 .ball6 {
-    background-color: orange;
-    animation-delay: .6s;
+  background-color: orange;
+  animation-delay: 0.6s;
 }
 
 .ball7 {
-    background-color: fuchsia;
-    animation-delay: .7s;
+  background-color: fuchsia;
+  animation-delay: 0.7s;
 }
 
 .ball8 {
-    background-color: gray;
-    animation-delay: .8s;
+  background-color: gray;
+  animation-delay: 0.8s;
 }
 
 .ball9 {
-    background-color: darkcyan;
-    animation-delay: .9s;
+  background-color: darkcyan;
+  animation-delay: 0.9s;
 }
 
 .ball10 {
-    background-color: indigo;
-    animation-delay: 1s;
+  background-color: indigo;
+  animation-delay: 1s;
 }
 
 .ball11 {
-    background-color: black;
-    animation-delay: 1.1s;
+  background-color: black;
+  animation-delay: 1.1s;
 }
 
 .ball12 {
-    background-color: darkcyan;
-    animation-delay: 1.2s;
+  background-color: darkcyan;
+  animation-delay: 1.2s;
 }
 
 .ball13 {
-    background-color: darkkhaki;
-    animation-delay: 1.3s;
+  background-color: darkkhaki;
+  animation-delay: 1.3s;
 }
 
 .ball14 {
-    background-color: brown;
-    animation-delay: 1.4s;
+  background-color: brown;
+  animation-delay: 1.4s;
 }
 
 .ball15 {
-    background-color: mediumpurple;
-    animation-delay: 1.5s;
+  background-color: mediumpurple;
+  animation-delay: 1.5s;
 }
 
 @keyframes bounce {
-    from {
-        margin-top: 0;
-    }
+  from {
+    margin-top: 0;
+  }
 
-    to {
-        margin-top: 500px;
-    }
-
+  to {
+    margin-top: 500px;
+  }
 }
 ```
 
-![酷炫球](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210623204139.gif)
+![酷炫球](https://img-blog.csdnimg.cn/img_convert/d50aebb593aefa2d94e62fcbaf49f37c.gif)

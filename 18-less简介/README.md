@@ -1,32 +1,28 @@
-> 笔记来源：[尚硅谷Web前端HTML5&CSS3初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
+> 笔记来源：[尚硅谷 Web 前端 HTML5&CSS3 初学者零基础入门全套完整版](https://www.bilibili.com/video/BV1XJ411X7Ud)
 
-[TOC]
+[toc]
 
-# less简介
+# less 简介
 
 `less`是一门`css`的预处理语言
 
-- `less`是一个css的增强版，通过`less`可以编写更少的代码实现更强大的样式
+- `less`是一个 css 的增强版，通过`less`可以编写更少的代码实现更强大的样式
 - 在`less`中添加了许多的新特性：像对变量的支持、对`mixin`的支持...
 - `less`的语法大体上和`css`语法一致，但是`less`中增添了许多对`css`的扩展，所以浏览器无法直接执行`less`代码，要执行必须向将`less`转换为`css`，然后再由浏览器执行
-
-
 
 ## 1、安装插件
 
 在`vscode`中搜索`less`，点击`安装`
 
-![image-20210626203546217](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626203547.png)
+![image-20210626203546217](https://img-blog.csdnimg.cn/img_convert/7649e0d4d1ad3f9179fecb8642287ad0.png)
 
+## 2、编写 less
 
-
-## 2、编写less
-
-**html代码**
+**html 代码**
 
 使用快捷方式创建`html`代码
 
-![image-20210626204018016](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626204018.png)
+![image-20210626204018016](https://img-blog.csdnimg.cn/img_convert/f992f8225262f1355df4628586602a87.png)
 
 `回车`生成`html`代码
 
@@ -36,7 +32,7 @@
 <div class="box3"></div>
 ```
 
-**less代码**
+**less 代码**
 
 创建`style.less`文件，编写`less`代码
 
@@ -62,7 +58,7 @@ body {
 
 `Easy LESS`插件会帮助我们在`style.less`所在目录下面生成一个相同名称的`css`文件
 
-![image-20210626204312658](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626204313.png)
+![image-20210626204312658](https://img-blog.csdnimg.cn/img_convert/201068ea2c14019210172db470a04934.png)
 
 查看生成的`style.css`代码
 
@@ -86,21 +82,19 @@ body .box3 {
 }
 ```
 
-我们直接在HTML中引入生成的`style.css`
+我们直接在 HTML 中引入生成的`style.css`
 
 ```html
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css" />
 ```
 
 运行代码，查看效果
 
-![image-20210626204502781](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626204503.png)
+![image-20210626204502781](https://img-blog.csdnimg.cn/img_convert/97f40a1f8f76041202ac4ef693ad5b36.png)
 
+## 3、less 语法
 
-
-## 3、less语法
-
-### less注释
+### less 注释
 
 `less`中的单行注释，注释中的内容不会被解析到`css`中
 
@@ -138,10 +132,10 @@ body {
       .box3 {
         background-color: yellow;
       }
-      >.box4{
+      > .box4 {
         background-color: green;
       }
-    }  
+    }
   }
 }
 ```
@@ -184,7 +178,7 @@ body .box1 .box2 > .box4 {
 
 - 直接使用使用变量时，则以`@变量名`的形式使用即可
 - 作为类名、属性名或者一部分值使用时，必须以`@{变量名}`的形式使用
-- 可以在变量声明前就使用变量（可以但不建议） 
+- 可以在变量声明前就使用变量（可以但不建议）
 
 ```less
 @b1:box1;
@@ -246,30 +240,30 @@ body .box1 .box2 > .box4 {
 ### 其他
 
 ```less
-.p1{
+.p1 {
   width: @size;
   height: $width;
-  &-wrapper{
+  &-wrapper {
     background-color: peru;
   }
   // &:hover{
   //   background-color: blue;
   // }
-  :hover{
+  :hover {
     background-color: blue;
   }
 }
-.p2:extend(.p1){
-  color:@color;
+.p2:extend(.p1) {
+  color: @color;
 }
-.p3{
+.p3 {
   .p1();
 }
-.p4(){
+.p4() {
   width: @size;
   height: $width;
 }
-.p5{
+.p5 {
   // .p4();
   .p4;
 }
@@ -308,20 +302,18 @@ body .box1 .box2 > .box4 {
 - `.p1()` 直接对指定的样式进行引用，这里就相当于将`p1`的样式在这里进行了复制（`mixin` 混合）
 - 使用类选择器时可以在选择器后边添加一个括号，这时我们实际上就创建了一个`mixins`混合函数
 
-
-
 ## 4、混合函数
 
 在混合函数中可以直接设置变量，并且可以指定默认值
 
 ```less
-.test(@w:200px, @h:100px, @bc:red){
+.test(@w:200px, @h:100px, @bc:red) {
   width: @w;
   height: @h;
   background-color: @bc;
 }
 
-.p6{
+.p6 {
   // .test(200px, 100px, red); // 对应参数位传值
   // .test(@h:200px,@w:100px,@bc:red); // 写明对应属性，可变换顺序
   // .test();
@@ -344,8 +336,8 @@ body .box1 .box2 > .box4 {
 - `average`混合函数
 
   ```less
-  .h1{
-    color:average(red,yellow);
+  .h1 {
+    color: average(red, yellow);
   }
   ```
 
@@ -360,20 +352,18 @@ body .box1 .box2 > .box4 {
 - `darken`混合函数
 
   ```less
-  body{
-      background-color: darken(#bfa, 50%);
+  body {
+    background-color: darken(#bfa, 50%);
   }
   ```
 
   生成的`css`代码
 
   ```css
-  body{
-      background-color: #22aa00;
-  }    
+  body {
+    background-color: #22aa00;
+  }
   ```
-
-  
 
 ## 5、补充
 
@@ -394,7 +384,7 @@ body .box1 .box2 > .box4 {
 
 如果我们观察过之前`fontawesome`源码文件，会发现其中也有`less`代码文件
 
-![image-20210626222450991](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626222452.png)
+![image-20210626222450991](https://img-blog.csdnimg.cn/img_convert/71b255aafaccb595fc0341c50f6a3fa0.png)
 
 不同的`less`文件里都有其自己的`职责`，如
 
@@ -404,7 +394,7 @@ body .box1 .box2 > .box4 {
 
 但是也有个问题，通过`F12`调试时显示的也是`css`中对应的行号
 
-![image-20210626223208492](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626223209.png)
+![image-20210626223208492](https://img-blog.csdnimg.cn/img_convert/dcc8dac7e284d8f1f296455dd302d7a6.png)
 
 如果我们要改，需要找一下，太麻烦了，能不能直接显示`less`中行号呢？这样我们直接定位到对应`less`中直接进行修改，维护起来也会比较方便
 
@@ -420,15 +410,14 @@ body .box1 .box2 > .box4 {
 
 修改完毕后，会发现多生成出来一个`all.css.map`文件，说明配置生效
 
-![image-20210626224441979](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626224443.png)
+![image-20210626224441979](https://img-blog.csdnimg.cn/img_convert/288677124cd646d938430db12c32efbe.png)
 
 再刷新下页面，通过`F12`会发现变成了`less`文件对应的行号
 
-![image-20210626223858712](https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210626223900.png)
+![image-20210626223858712](https://img-blog.csdnimg.cn/img_convert/781253b1659517f6dcf08697930b8e6d.png)
 
 我们来逐一解释下配置的`less.compile`项中每一个属性的含义
 
 - `compress` 生成的`css`文件代码会被压缩（作用相当于我们之前安装的`JS & CSS Minifier (Minify)`插件的效果）
 - `sourceMap` 生成`.css.map`文件，通过`F12`可以查看了`less`文件对应行号
 - `out` 生成对应`css`文件（当然是需要了）
-
